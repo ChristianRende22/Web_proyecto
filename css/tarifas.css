@@ -1,0 +1,177 @@
+/* CSS Simple para Página de Tarifas */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Colores */
+:root {
+    --negro-suave: #1C1C1C;
+    --blanco-hueso: #FAF7F4;
+    --naranja-vibrante: #F36B3A;
+    --beige-claro: #F4EDE7;
+    --gris-medio: #7A7A7A;
+    --verde-oliva: #8A9C7B;
+    --terracota: #C65A46;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #1C1C1C;
+    background-color: #FAF7F4;
+}
+
+/* Botón de Inicio */
+.boton-inicio {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #F36B3A;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(243, 107, 58, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.boton-inicio:hover {
+    background: #e55a2b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(243, 107, 58, 0.4);
+}
+
+/* Encabezado */
+.encabezado {
+    text-align: center;
+    padding: 80px 20px 120px 20px;
+    background: linear-gradient(135deg, #F36B3A, #F4EDE7);
+    color: var(--negro-suave);
+    position: relative;
+    overflow: hidden;
+}
+
+.encabezado::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #FAF7F4;
+    border-radius: 50% 50% 0 0;
+}
+
+.titulo {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.subtitulo {
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Tarifas */
+.tarifas {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Sección de tarifas */
+.seccion_tarifas {
+    background-color: var(--beige-claro);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    padding: 20px 25px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.seccion_tarifas:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.titulo_tarifa {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: var(--naranja-vibrante);
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.contenido_tarifa {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.imagen {
+    flex: 1 1 45%;
+    max-width: 45%;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 6px 15px rgba(var(--verde-oliva));
+    transition: transform 0.3s;
+}
+
+/* Tabla */
+.tabla {
+    flex: 1 1 50%; 
+    max-width: 50%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.th, .celda {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(var(--gris-medio));
+}
+
+.th {
+    background-color: var(--naranja-vibrante);
+    color: #FAF7F4;
+    font-weight: 600;
+}
+
+.row:nth-child(even) {
+    background-color: #FAF7F4; /* Fondo suave alternado */
+}
+
+.celda {
+    color: #1C1C1C;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #1C1C1C; /* Negro suave */
+    color: #FAF7F4;
+    font-size: 0.9rem;
+    font-style: italic;
+}
