@@ -20,7 +20,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
     line-height: 1.6;
     color: #1C1C1C;
     background-color: #FAF7F4;
@@ -146,13 +146,13 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.th, .celda {
+th, td {
     padding: 12px 15px;
     text-align: left;
     border-bottom: 1px solid rgba(var(--gris-medio));
 }
 
-.th {
+th {
     background-color: var(--naranja-vibrante);
     color: #FAF7F4;
     font-weight: 600;
@@ -162,7 +162,7 @@ body {
     background-color: #FAF7F4; /* Fondo suave alternado */
 }
 
-.celda {
+td {
     color: #1C1C1C;
 }
 
