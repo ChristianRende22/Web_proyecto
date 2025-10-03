@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('../img/mapa2.jpg');    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #1C1C1C;
+    min-height: 100vh;
+}
+header {
+    width: 100%;
+    min-height: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:  #F36B3A;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+}
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.3;
+}
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    color: #FAF7F4;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+    position: relative;
+}
+
+header p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #F4EDE7;
+    position: relative;
+    z-index: 1;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 60px auto;
+    padding: 0 10px;
+}
+/* "conocenos un poco mas */
+.container h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #F36B3A;
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 40px; /* Espacio entre tarjetas para evitar solapamiento */
+    margin-top: 40px;
+    max-width: 800px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+.cartas {
+    background: linear-gradient(145deg, #FFFFFF 0%, #F4EDE7 100%);
+    border-radius: 20px;
+    padding: 30px 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+/* animacion de arriba */
+.cartas::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #F36B3A, #C65A46);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+.cartas:hover::before {
+    transform: scaleX(1);
+}
+/* imagen del avioncito */
+.cartas::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    width: 200px;
+    height: 200px;
+    background-image: url('../img/avion.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+    z-index: 2;
+}
+/* posicionando las cartas de nosotros */
+.cartas:nth-child(1) { 
+    transform: translateY(0);
+}
+.cartas:nth-child(2) { 
+    transform: translateY(7px);
+}
+.cartas:nth-child(3) { 
+    transform: translateY(-5px);
+}
+.cartas:nth-child(4) { 
+    transform: translateY(8px);
+}
+.cartas:nth-child(5) { 
+    transform: translateY(-3px);
+}
+
+.cartas:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(238, 84, 28, 0.371);
+}
+/* nombres */
+.cartas h3 {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1C1C1C;
+    margin-bottom: 20px;
+    line-height: 1.4;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.foto {
+    position: relative;
+    width: 220px;
+    height: 300px;
+    margin: 20px auto 25px;
+    background: #FFFFFF;
+    padding: 15px;
+    padding-bottom: 45px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: rotate(0deg);
+}
+/* borde de la foto */
+.foto::after {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    background: linear-gradient(135deg, #F36B3A, #C65A46, #8A9C7B);
+    z-index: -1;
+    border-radius: 10px;
+}
+/* nuestra pic */
+.cartas img {
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+    display: block;
+}
+/* descripcion */
+.cartas p {
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #1C1C1C;
+    margin-bottom: 15px;
+    text-align: center;
+    flex-grow: 1;
+}
+/* roles que tuvimos en la pag */
+.cartas .rol {
+    font-size: 0.9rem;
+    color: #7A7A7A;
+    font-weight: 500;
+    background: #FAF7F4;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border-left: 3px solid #F36B3A;
+    border-right: 3px solid #F36B3A;
+}
+.boton-correo {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 14px 20px;
+    background: linear-gradient(135deg, #F36B3A 0%, #C65A46 100%);
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+/* efecto del boton */
+.boton-correo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(243, 107, 58, 0.4);
+    background: linear-gradient(135deg, #C65A46 0%, #F36B3A 100%);
+}
+.boton-correo:active {
+    transform: translateY(0);
+}
+/* responsive */
+@media (max-width: 1200px) {
+    header h1 {
+        font-size: 3rem;
+    }
+    .container h2 {
+        font-size: 2.3rem;
+    }
+}
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    header p {
+        font-size: 1.1rem;
+    } 
+    .container h2 {
+        font-size: 2rem;
+    } 
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    } 
+    .cartas:nth-child(n) {
+        transform: translateY(0) !important;
+    }
+    .cartas:hover {
+        transform: translateY(-10px) scale(1.01) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        min-height: 20vh;
+        padding: 30px 15px;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    .foto {
+        width: 180px;
+        height: 240px;
+    }
+}
