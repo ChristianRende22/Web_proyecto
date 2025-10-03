@@ -10,7 +10,7 @@
 
 <body>
     <!-- Botón Inicio -->
-    <a href="index.html" class="boton-inicio"> Inicio</a>
+    <a href="../index.html" class="boton-inicio"> Inicio</a>
 
     <!-- Encabezado -->
     <header class="encabezado">
@@ -27,8 +27,7 @@
         <div class="lugares">
 
             <div class="lugar">
-                <img src="../img/Santa_ana.jpeg"
-                    alt="Volcán">
+                <img src="../img/Santa_ana.jpeg" alt="Volcán de Santa Ana">
                 <div class="info">
                     <h3>Volcán de Santa Ana</h3>
                     <p>El volcán más alto del país con una laguna verde hermosa</p>
@@ -38,12 +37,12 @@
                         <span class="actividad"> Observación volcánica</span>
                     </div>
                     <span class="categoria naturaleza">Naturaleza</span>
+                    <label for="card1" class="ver-detalles">Cómo llegar</label>
                 </div>
             </div>
 
             <div class="lugar">
-                <img src="../img/Playa_tunco.jpeg"
-                    alt="Playa">
+                <img src="../img/Playa_tunco.jpeg" alt="Playa El Tunco">
                 <div class="info">
                     <h3>Playa El Tunco</h3>
                     <p>La playa más famosa para hacer surf y disfrutar</p>
@@ -54,11 +53,12 @@
                         <span class="actividad"> Buceo</span>
                     </div>
                     <span class="categoria playas">Playas</span>
+                    <label for="card2" class="ver-detalles">Cómo llegar</label>
                 </div>
             </div>
 
             <div class="lugar">
-                <img src="../img/joya-de-ceren.jpg" alt="Ruinas">
+                <img src="../img/joya-de-ceren.jpg" alt="Ruinas Joya de Ceren">
                 <div class="info">
                     <h3>Joya de Cerén</h3>
                     <p>Ruinas antiguas muy importantes de nuestros antepasados</p>
@@ -68,11 +68,12 @@
                         <span class="actividad"> Cultura maya</span>
                     </div>
                     <span class="categoria cultura">Cultura</span>
+                    <label for="card3" class="ver-detalles">Cómo llegar</label>
                 </div>
             </div>
 
             <div class="lugar">
-                <img src="../img/rutadelasflores.jpg" alt="Pueblo">
+                <img src="../img/rutadelasflores.jpg" alt="Ruta de las Flores">
                 <div class="info">
                     <h3>Ruta de las Flores</h3>
                     <p>Pueblos bonitos con flores y artesanías</p>
@@ -83,6 +84,7 @@
                         <span class="actividad"> Arte local</span>
                     </div>
                     <span class="categoria aventura">Aventura</span>
+                    <label for="card4" class="ver-detalles">Cómo llegar</label>
                 </div>
             </div>
 
@@ -98,12 +100,12 @@
                         <span class="actividad"> Relajación</span>
                     </div>
                     <span class="categoria naturaleza">Naturaleza</span>
+                    <label for="card5" class="ver-detalles">Cómo llegar</label>
                 </div>
             </div>
 
             <div class="lugar">
-                <img src="../img/centro.jpg"
-                    alt="Centro">
+                <img src="../img/centro.jpg" alt="Centro">
                 <div class="info">
                     <h3>Centro de San Salvador</h3>
                     <p>El corazón de la capital con muchos lugares históricos</p>
@@ -114,12 +116,12 @@
                         <span class="actividad"> Compras</span>
                     </div>
                     <span class="categoria cultura">Cultura</span>
+                    <label for="card6" class="ver-detalles">Cómo llegar</label>
                 </div>
             </div>
             
             <div class="lugar">
-                <img src="../img/Olocuilta.jpg"
-                    alt="Olocuilta">
+                <img src="../img/Olocuilta.jpg" alt="Olocuilta">
                 <div class="info">
                     <h3>Olocuilta</h3>
                     <p>Famoso por sus deliciosas pupusas y ambiente tradicional salvadoreño</p>
@@ -130,12 +132,12 @@
                         <span class="actividad"> Artesanías</span>
                     </div>
                     <span class="categoria gastronomia">Gastronomía</span>
+                    <label for="card7" class="ver-detalles">Cómo llegar</label>
                 </div>
             </div>
 
             <div class="lugar">
-                <img src="../img/Imposible.jpg"
-                    alt="Parque">
+                <img src="../img/Imposible.jpg" alt="Parque">
                 <div class="info">
                     <h3>Parque Nacional El Imposible</h3>
                     <p>El parque más grande con muchos animales y plantas</p>
@@ -146,6 +148,7 @@
                         <span class="actividad"> Fotografía</span>
                     </div>
                     <span class="categoria naturaleza">Naturaleza</span>
+                    <label for="card8" class="ver-detalles">Cómo llegar</label>
                 </div>
             </div>
 
@@ -162,10 +165,660 @@
                         <span class="actividad"> Hospedaje</span>
                     </div>
                     <span class="categoria playas">Playas</span>
+                    <label for="card9" class="ver-detalles">Cómo llegar</label>
                 </div>
             </div>
 
         </div>
+
+        <!-- Card 1 -->
+        <input type="checkbox" id="card1" class="toggle">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-header">
+                    <h2>🌋 Volcán de Santa Ana</h2>
+                    <label for="card1" class="btn-close">x</label>
+                </div>
+                <div class="card-body">
+                    <div class="info-general">
+                        <h3>📌 Desde San Salvador</h3>
+                        <ul>
+                            <li>Distancia: 65 km</li>
+                            <li>Tiempo: 1 hora 15 minutos</li>
+                        </ul>
+                    </div>
+                    <div class="transporte-card">
+                        <h3>🚵 Atracciones en el lugar</h3>
+                        <ul>
+                            <li>- Laguna verde esmeralda en el cráter del volcán</li>
+                            <li>- Vistas panorámicas del Lago de Coatepeque</li>
+                            <li>- Observación del Volcán Izalco</li>
+                            <li>- Senderos naturales en Cerro Verde</li>
+                            <li>- Miradores con vistas de tres volcanes</li>
+                            <li>- Flora y fauna del bosque nebuloso</li>
+                            <li>- Fotografía de paisajes volcánicos</li>
+                        </ul>
+                    </div>
+                    <div class="opciones-transporte">
+                        <div class="transporte-card">
+                            <h3>🚗 Transporte particular</h3>
+                            <ul>
+                                <li>Ruta: Carretera Panamericana (CA-1) hacia Santa Ana</li>
+                                <li>Parqueo: Disponible en el Parque Nacional ($3 USD)</li>
+                                <li>Estado de carretera: Buen estado</li>
+                            </ul>
+                        </div>
+                        <div class="transporte-card">
+                            <h3>🚌 Transporte público</h3>
+                            <ul>
+                                <li>Ruta 205: Terminal de Occidente → Santa Ana.</li>
+                                <li>Luego Bus 248 desde la Estación La Vencedora en Santa Ana hacia Cerro Verde</li>
+                                <li>Costo: $1.50 - $2.00 USD total</li>
+                                <li>Frecuencia: Cada 30 minutos</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mapa-section">
+                        <h3>📍 Ubicación en el mapa</h3>
+                        <div class="mapa-placeholder">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15495.269418289983!2d-89.63974416926953!3d13.84999953483197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f62c16156d6e997%3A0x2fd88a9ab0dbc675!2sSanta%20Ana%20Volcano!5e0!3m2!1sen!2ssv!4v1759505851886!5m2!1sen!2ssv" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <input type="checkbox" id="card2" class="toggle">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-header">
+                    <h2>🏖️ Playa El Tunco</h2>
+                    <label for="card2" class="btn-close">x</label>
+                </div>
+                <div class="card-body">
+                    <div class="info-general">
+                        <h3>📌 Desde San Salvador</h3>
+                        <ul>
+                            <li>Distancia: 40-45 km</li>
+                            <li>Tiempo: 45 minutos a 1 hora</li>
+                        </ul>
+                    </div>
+                    <div class="transporte-card">
+                        <h3>🚵 Atracciones en el lugar</h3>
+                        <ul>
+                            <li>- Surf para todos los niveles (olas consistentes)</li>
+                            <li>- La famosa roca "El Tunco" (formación de piedra)</li>
+                            <li>- Escuelas de surf y alquiler de tablas</li>
+                            <li>- Piscinas naturales entre rocas</li>
+                            <li>- Vida nocturna y bares frente al mar</li>
+                            <li>- Restaurantes con mariscos frescos</li>
+                            <li>- Sunset watching (atardeceres espectaculares)</li>
+                            <li>- Yoga en la playa</li>
+                            <li>- Caminatas a playas cercanas (El Sunzal, El Zonte)</li>
+                        </ul>
+                    </div>
+                    <div class="opciones-transporte">
+                        <div class="transporte-card">
+                            <h3>🚗 Transporte particular</h3>
+                            <ul>
+                                <li>Ruta: Carretera del Litoral (CA-2) hacia el oeste</li>
+                                <li>Dirección: Hacia La Libertad, km 42, desvío señalizado</li>
+                                <li>Parqueo: $2-3 USD por día cerca de la playa</li>
+                            </ul>
+                        </div>
+                        <div class="transporte-card">
+                            <h3>🚌 Transporte público</h3>
+                            <ul>
+                                <li>Opción 1: Ruta 102, 102-A (recomendada)
+                                    <ul>
+                                        <li>Salida: Cerca del Cementerio Los Ilustres, San Salvador</li>
+                                        <li>Destino: Playa El Sunzal (El Tunco está en el camino)</li>
+                                        <li>Costo: $0.80 USD bus ordinario / $1.50 USD microbus</li>
+                                        <li>Frecuencia: Cada 15-20 minutos</li>
+                                        <li>Horario: 5:00 AM - 7:00 PM</li>
+                                    </ul>
+                                </li>
+                                <li>Opción 2: Rutas 107 o 177
+                                    <ul>
+                                        <li>Costo: $1.50 USD</li>
+                                        <li>Tiempo: 1 hora aproximadamente</li>
+                                    </ul>
+                                </li>
+                                <li>Desde La Libertad a El Tunco: Bus 80 (corre entre Sunzal y La Libertad)
+                                    <ul>
+                                        <li>Costo: $0.25 USD</li>
+                                        <li>Frecuencia: Cada 15-20 minutos</li>
+                                        <li>Horario: 4:30 AM - 5:30 PM</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mapa-section">
+                        <h3>📍 Ubicación en el mapa</h3>
+                        <div class="mapa-placeholder">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15518.822923180538!2d-89.39168866940166!3d13.492221739966956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f7cd59f22c8da2b%3A0xc9cb9224ff2461d7!2sPlaya%20El%20Tunco!5e0!3m2!1sen!2ssv!4v1759513864812!5m2!1sen!2ssv" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <input type="checkbox" id="card3" class="toggle">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-header">
+                    <h2>🏔️ Joya de Cerén</h2>
+                    <label for="card3" class="btn-close">x</label>
+                </div>
+                <div class="card-body">
+                    <div class="info-general">
+                        <h3>📌 Desde San Salvador</h3>
+                        <ul>
+                            <li>Distancia: 36 km al noroeste</li>
+                            <li>Tiempo: 30-40 minutos</li>
+                        </ul>
+                    </div>
+                    <div class="transporte-card">
+                        <h3>🚵 Atracciones en el lugar</h3>
+                        <ul>
+                            <li>- Estructuras mayas preservadas (casas, cocinas, bodegas)</li>
+                            <li>- Objetos cotidianos de hace 1,400 años</li>
+                            <li>- Museo del sitio con artefactos</li>
+                            <li>- Estructuras ceremoniales y viviendas</li>
+                            <li>- Baño de vapor (temazcal) prehispánico</li>
+                            <li>- Campos de cultivo antiguos preservados</li>
+                            <li>- Centro de interpretación educativo</li>
+                            <li>- "La Pompeya de América" (pueblo sepultado por ceniza volcánica)</li>
+                        </ul>
+                    </div>
+                    <div class="opciones-transporte">
+                        <div class="transporte-card">
+                            <h3>🚗 Transporte particular</h3>
+                            <ul>
+                                <li>Ruta: Carretera Panamericana (CA-1) Oeste hacia San Juan Opico</li>
+                                <li>Ubicación: Km 32 de la Panamericana</li>
+                                <li>Parqueo: Gratuito en el sitio arqueológico</li>
+                            </ul>
+                        </div>
+                        <div class="transporte-card">
+                            <h3>🚌 Transporte público</h3>
+                            <ul>
+                                <li>Opción 1: Ruta 108
+                                    <ul>
+                                        <li>Desde: San Salvador</li>
+                                        <li>Destino: San Juan Opico</li>
+                                        <li>Bajada: Desvío Joya de Cerén (km 32)</li>
+                                        <li>Caminata: 500 metros desde la carretera</li>
+                                        <li>Costo: $0.45 USD</li>
+                                        <li>Frecuencia: Cada 20 minutos</li>
+                                    </ul>
+                                </li>
+                                <li>Opción 2: Rutas 201 o 202
+                                    <ul>
+                                        <li>Desde: Terminal de Occidente</li>
+                                        <li>Destino: Santa Ana o Ahuachapán</li>
+                                        <li>Bajada: Km 32, Joya de Cerén</li>
+                                        <li>Costo: $1.50 USD</li>
+                                    </ul>
+                                </li>
+                                <li>Opción 3: Ruta 101B
+                                    <ul>
+                                        <li>Dirección hacia La Libertad</li>
+                                        <li>Bajada: Parada Sitio Arqueológico Joya de Cerén</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mapa-section">
+                        <h3>📍 Ubicación en el mapa</h3>
+                        <div class="mapa-placeholder">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15497.18202748744!2d-89.37835819647277!3d13.82128591058896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f63212ab199a6dd%3A0x51207fe999d8c593!2sJoya%20de%20Ceren!5e0!3m2!1sen!2ssv!4v1759514487829!5m2!1sen!2ssv" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <input type="checkbox" id="card4" class="toggle">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-header">
+                    <h2>🌺 Ruta de las Flores</h2>
+                    <label for="card4" class="btn-close">x</label>
+                </div>
+                <div class="card-body">
+                    <div class="info-general">
+                        <h3>📌 Desde San Salvador</h3>
+                        <ul>
+                            <li>Distancia: 80-90 km (varía según pueblo)</li>
+                            <li>Tiempo: 1 hora 30 minutos - 2 horas</li>
+                        </ul>
+                    </div>
+                    <div class="transporte-card">
+                        <h3>🚵 Atracciones en el lugar</h3>
+                        <ul>
+                            <li>Nahuizalco:
+                                <ul>
+                                    <li>Mercado nocturno artesanal (jueves a sábado)</li>
+                                    <li>Artesanías de mimbre y madera</li>
+                                    <li>Muebles coloniales hechos a mano</li>
+                                    <li>Iglesia colonial del siglo XIX</li>
+                                    <li>Talleres artesanales tradicionales</li>
+                                </ul>
+                            </li>
+                            <li>Salcoatitán:
+                                <ul>
+                                    <li>Mirador turístico con vistas panorámicas</li>
+                                    <li>Iglesia colonial pintoresca</li>
+                                    <li>Vivero de orquídeas</li>
+                                    <li>Cafeterías con vista al valle</li>
+                                </ul>
+                            </li>
+                            <li>Juayúa:
+                                <ul>
+                                    <li>Festival Gastronómico (fines de semana)</li>
+                                    <li>Cascadas Los Chorros de la Calera</li>
+                                    <li>Iglesia Cristo Negro (colonial)</li>
+                                    <li>Tours de café en fincas</li>
+                                    <li>Canopy y tirolesa</li>
+                                    <li>Excursiones a cascadas cercanas</li>
+                                    <li>Arte callejero y murales</li>
+                                </ul>
+                            </li>
+                            <li>Apaneca:
+                                <ul>
+                                    <li>Laguna Verde (crater volcánico)</li>
+                                    <li>Laguna de las Ninfas</li>
+                                    <li>Tours por plantaciones de café</li>
+                                    <li>Mirador de la Cruz</li>
+                                    <li>Clima fresco de montaña</li>
+                                    <li>Cabalgatas</li>
+                                    <li>Viveros de plantas ornamentales</li>
+                                </ul>
+                            </li>
+                            <li>Concepción de Ataco:
+                                <ul>
+                                    <li>Murales coloridos en todo el pueblo</li>
+                                    <li>Galerías de arte y artesanías</li>
+                                    <li>Talleres de artistas locales</li>
+                                    <li>Tiendas de souvenirs únicos</li>
+                                    <li>Restaurantes con cocina de autor</li>
+                                    <li>Mirador turístico El Calvario</li>
+                                    <li>Iglesia colonial pintoresca</li>
+                                    <li>Jardines Florales</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="opciones-transporte">
+                        <div class="transporte-card">
+                            <h3>🚗 Transporte particular</h3>
+                            <ul>
+                                <li>Ruta: Carretera Panamericana (CA-1) hacia Sonsonate</li>
+                                <li>Dirección: San Salvador → Santa Tecla → Sonsonate</li>
+                                <li>Tiempo entre pueblos: 10-15 minutos</li>
+                            </ul>
+                        </div>
+                        <div class="transporte-card">
+                            <h3>🚌 Transporte público</h3>
+                            <ul>
+                                <li>Primera etapa: Ruta 205
+                                    <ul>
+                                        <li>Desde: Terminal de Occidente</li>
+                                        <li>Destino: Sonsonate</li>
+                                        <li>Costo: $1.25 USD</li>
+                                        <li>Frecuencia: Cada 15 minutos</li>
+                                    </ul>
+                                </li>
+                                <li>Segunda etapa: Rutas locales 249 o 53
+                                    <ul>
+                                        <li>Desde: Sonsonate</li>
+                                        <li>Destino: Pueblos de la Ruta</li>
+                                        <li>Costo: $0.50 - $1.00 USD por tramo</li>
+                                        <li>Conexiones entre pueblos cada 20-30 minutos</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mapa-section">
+                        <h3>📍 Ubicación en el mapa</h3>
+                        <div class="mapa-placeholder">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124059.10647688846!2d-89.76234842597653!3d13.81499845796976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f633a5b8c9b9b45%3A0x7e6b9c8d5f6a7b8c!2sRuta%20de%20las%20Flores!5e0!3m2!1sen!2ssv!4v1759515000000!5m2!1sen!2ssv" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <input type="checkbox" id="card5" class="toggle">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-header">
+                    <h2>⛵ Lago de Coatepeque</h2>
+                    <label for="card5" class="btn-close">x</label>
+                </div>
+                <div class="card-body">
+                    <div class="info-general">
+                        <h3>📌 Desde San Salvador</h3>
+                        <ul>
+                            <li>Distancia: 56 km</li>
+                            <li>Tiempo: 1 hora</li>
+                        </ul>
+                    </div>
+                    <div class="transporte-card">
+                        <h3>🚵 Atracciones en el lugar</h3>
+                        <ul>
+                            <li>- Paseos en lancha por el lago volcánico</li>
+                            <li>- Deportes acuáticos (kayak, paddle board, jet ski)</li>
+                            <li>- Restaurantes flotantes con vista panorámica</li>
+                            <li>- Miradores panorámicos del lago</li>
+                            <li>- Hoteles boutique con vista al agua</li>
+                            <li>- Pesca deportiva</li>
+                            <li>- Isla Teopán (pequeña isla en el centro)</li>
+                            <li>- Clubes náuticos y marinas</li>
+                            <li>- Fotografía de atardeceres espectaculares</li>
+                            <li>- Relajación en restaurantes a orilla del lago</li>
+                            <li>- Aguas termales naturales en algunas áreas</li>
+                        </ul>
+                    </div>
+                    <div class="opciones-transporte">
+                        <div class="transporte-card">
+                            <h3>🚗 Transporte particular</h3>
+                            <ul>
+                                <li>Ruta: Carretera Panamericana (CA-1) hacia Santa Ana</li>
+                                <li>Dirección: Desvío hacia El Congo, luego señalización al lago</li>
+                                <li>Parqueo: Disponible en restaurantes y miradores (algunos gratuitos)</li>
+                            </ul>
+                        </div>
+                        <div class="transporte-card">
+                            <h3>🚌 Transporte público</h3>
+                            <ul>
+                                <li>Ruta 205 o 201: San Salvador → Santa Ana</li>
+                                <li>Desde Santa Ana: Bus local hacia El Congo</li>
+                                <li>Costo total: $1.50 - $2.00 USD</li>
+                                <li>Frecuencia: Cada 30 minutos</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mapa-section">
+                        <h3>📍 Ubicación en el mapa</h3>
+                        <div class="mapa-placeholder">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61977.55808091726!2d-89.62144192982757!3d13.863189686824988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f62dcd48bbf3581%3A0xcbb51df50ff589a9!2sLago%20de%20Coatepeque!5e0!3m2!1sen!2ssv!4v1759516824886!5m2!1sen!2ssv" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <input type="checkbox" id="card6" class="toggle">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-header">
+                    <h2>⛪ Centro de San Salvador</h2>
+                    <label for="card6" class="btn-close">x</label>
+                </div>
+                <div class="card-body">
+                    <div class="transporte-card">
+                        <h3>🚵 Atracciones en el lugar</h3>
+                        <ul>
+                            <li>- Plaza Gerardo Barrios (plaza central histórica)</li>
+                            <li>- Catedral Metropolitana (arquitectura neoclásica)</li>
+                            <li>- Teatro Nacional de San Salvador (edificio histórico)</li>
+                            <li>- Palacio Nacional (tours disponibles)</li>
+                            <li>- Mercado Central (artesanías y comida local)</li>
+                            <li>- Iglesia El Rosario (arquitectura modernista única)</li>
+                            <li>- Biblioteca Nacional</li>
+                            <li>- Parque Libertad</li>
+                            <li>- Museos del centro histórico</li>
+                            <li>- Mercado Ex-Cuartel (gastronomía y artesanías)</li>
+                            <li>- Plaza Morazán</li>
+                            <li>- Monumentos históricos y estatuas</li>
+                            <li>- Arquitectura colonial y republicana</li>
+                            <li>- Tiendas tradicionales y comercios locales</li>
+                        </ul>
+                    </div>
+                    <div class="opciones-transporte">
+                        <div class="transporte-card">
+                            <h3>🅿️ Parqueo</h3>
+                            <ul>
+                                <li>Parqueos privados: $1 - $3 USD por hora</li>
+                                <li>Zonas comerciales con parqueo propio</li>
+                            </ul>
+                        </div>
+                        <div class="transporte-card">
+                            <h3>🚌 Transporte público dentro de la ciudad</h3>
+                            <ul>
+                                <li>Ruta 205 o 201: San Salvador → Santa Ana</li>
+                                <li>Desde Santa Ana: Bus local hacia El Congo</li>
+                                <li>Costo total: $1.50 - $2.00 USD</li>
+                                <li>Frecuencia: Cada 30 minutos</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mapa-section">
+                        <h3>📍 Ubicación en el mapa</h3>
+                        <div class="mapa-placeholder">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15505.305071043436!2d-89.20460706932583!3d13.698678736999742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6330ebffdbfb45%3A0x513c506801a25f0e!2sCentro%20Hist%C3%B3rico%20de%20SS%2C%20San%20Salvador!5e0!3m2!1sen!2ssv!4v1759520519694!5m2!1sen!2ssv" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 7 -->
+        <input type="checkbox" id="card7" class="toggle">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-header">
+                    <h2>🫔 Olocuilta</h2>
+                    <label for="card7" class="btn-close">x</label>
+                </div>
+                <div class="card-body">
+                    <div class="info-general">
+                        <h3>📌 Desde San Salvador:</h3>
+                        <ul>
+                            <li>Distancia: 18 km al este</li>
+                            <li>Tiempo: 25-30 minutos</li>
+                        </ul>
+                    </div>
+                    <div class="transporte-card">
+                        <h3>🚵 Atracciones en el lugar</h3>
+                        <ul>
+                            <li>- Mercado de Pupusas (famoso a nivel nacional)</li>
+                            <li>- Docenas de pupuserías tradicionales</li>
+                            <li>- Gastronomía salvadoreña auténtica</li>
+                            <li>- Iglesia colonial del pueblo</li>
+                            <li>- Plaza central pintoresca</li>
+                            <li>- Tiendas de dulces artesanales</li>
+                            <li>- Semitas (pan dulce tradicional)</li>
+                            <li>- Quesadilla salvadoreña (postre de arroz)</li>
+                            <li>- Ambiente familiar tradicional</li>
+                            <li>- Paradas de comida típica salvadoreña</li>
+                        </ul>
+                    </div>
+                    <div class="opciones-transporte">
+                        <div class="transporte-card">
+                            <h3>🚗 Transporte particular</h3>
+                            <ul>
+                                <li>Ruta: Carretera Panamericana (CA-1) Este</li>
+                                <li>Dirección: Hacia el Aeropuerto Internacional</li>
+                                <li>Señalización: Salida claramente marcada</li>
+                                <li>Parqueo: Disponible en restaurantes (gratuito con consumo)</li>
+                            </ul>
+                        </div>
+                        <div class="transporte-card">
+                            <h3>🚌 Transporte público</h3>
+                            <ul>
+                                <li>Rutas hacia oriente desde Terminal de Oriente</li>
+                                <li>Múltiples rutas pasan por Olocuilta (118, 133, etc.)</li>
+                                <li>Costo: $0.35 - $0.50 USD</li>
+                                <li>Frecuencia: Cada 10-15 minutos</li>
+                                <li>Horario: 5:00 AM - 8:00 PM</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mapa-section">
+                        <h3>📍 Ubicación en el mapa</h3>
+                        <div class="mapa-placeholder">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15513.75334680273!2d-89.13371129700741!3d13.570010122161131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6335137d81d273%3A0xff55ecab98045171!2sOlocuilta!5e0!3m2!1sen!2ssv!4v1759521072665!5m2!1sen!2ssv" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 8 -->
+        <input type="checkbox" id="card8" class="toggle">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-header">
+                    <h2>🏞️ Parque Nacional el Imposible</h2>
+                    <label for="card8" class="btn-close">x</label>
+                </div>
+                <div class="card-body">
+                    <div class="info-general">
+                        <h3>📌 Desde San Salvador:</h3>
+                        <ul>
+                            <li>Distancia: 98 km (hacia occidente)</li>
+                            <li>Tiempo: 2 horas 30 minutos - 3 horas</li>
+                        </ul>
+                    </div>
+                    <div class="transporte-card">
+                        <h3>🚵 Atracciones en el lugar</h3>
+                        <ul>
+                            <li>- Senderos de senderismo (varios niveles de dificultad)</li>
+                            <li>- Cascadas naturales espectaculares</li>
+                            <li>- Observación de aves (más de 400 especies)</li>
+                            <li>- Flora y fauna única del bosque tropical</li>
+                            <li>- Miradores panorámicos de montaña</li>
+                            <li>- Ríos y quebradas cristalinas</li>
+                            <li>- Fotografía de naturaleza</li>
+                            <li>- Bosque primario preservado</li>
+                            <li>- Puentes colgantes sobre ríos</li>
+                            <li>- Piscinas naturales</li>
+                            <li>- Biodiversidad excepcional (árboles gigantes centenarios)</li>
+                            <li>- Mamíferos silvestres (ocasionalmente visibles)</li>
+                            <li>- Camping en áreas designadas</li>
+                        </ul>
+                    </div>
+                    <div class="opciones-transporte">
+                        <div class="transporte-card">
+                            <h3>🚗 Transporte particular</h3>
+                            <ul>
+                                <li>Ruta: CA-1 Oeste → Sonsonate → CA-12 hacia Cara Sucia</li>
+                                <li>Dirección: Carretera hacia la costa, zona de Ahuachapán</li>
+                                <li>Estado: Carretera en buen estado hasta entrada del parque</li>
+                                <li>Última parte: Camino de tierra (4x4 recomendado)</li>
+                            </ul>
+                        </div>
+                        <div class="transporte-card">
+                            <h3>🚌 Transporte público</h3>
+                            <ul>
+                                <li> Primera etapa: Ruta 205 o 259 
+                                    <ul>
+                                        <li>Desde: Terminal de Occidente</li>
+                                        <li>Destino: Sonsonate</li>
+                                        <li>Costo: $1.50 USD</li>
+                                    </ul>
+                                </li>
+                                <li>Segunda etapa: Bus hacia Cara Sucia o San Francisco Menéndez
+                                    <ul>
+                                        <li>Desde: Sonsonate</li>
+                                        <li>Bajada: Entrada al parque (preguntar al conductor)</li>
+                                        <li>Costo: $1.00 - $1.50 USD</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mapa-section">
+                        <h3>📍 Ubicación en el mapa</h3>
+                        <div class="mapa-placeholder">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.0969782941334!2d-89.93724172606822!3d13.833214886567232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f62a13501443f5f%3A0x21f260e3d4906f2!2sParque%20Nacional%20El%20Imposible!5e0!3m2!1sen!2ssv!4v1759521422711!5m2!1sen!2ssv" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 9 -->
+        <input type="checkbox" id="card9" class="toggle">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-header">
+                    <h2>🏄‍♂️ Playa El Zonte</h2>
+                    <label for="card9" class="btn-close">x</label>
+                </div>
+                <div class="card-body">
+                    <div class="info-general">
+                        <h3>📌 Desde San Salvador:</h3>
+                        <ul>
+                            <li>Distancia: 48 km</li>
+                            <li>Tiempo: 1 hora</li>
+                        </ul>
+                    </div>
+                    <div class="transporte-card">
+                        <h3>🚵 Atracciones en el lugar</h3>
+                        <ul>
+                            <li>- Surf de clase mundial (olas constantes)</li>
+                            <li>- Bitcoin Beach (pionero en adopción de Bitcoin)</li>
+                            <li>- Escuela de surf Hope House</li>
+                            <li>- Clases de surf para principiantes</li>
+                            <li>- Ambiente bohemio y relajado</li>
+                            <li>- Restaurantes frente al mar</li>
+                            <li>- Hostales y hoteles boutique</li>
+                            <li>- Atardeceres espectaculares</li>
+                            <li>- Piscinas naturales entre rocas</li>
+                            <li>- Yoga y meditación en la playa</li>
+                            <li>- Gastronomía local y internacional</li>
+                            <li>- Cafeterías con café de altura</li>
+                            <li>- Actividades acuáticas (paddle board, kayak)</li>
+                            <li>- Comunidad artística local</li>
+                            <li>- Murales y arte callejero</li>
+                        </ul>
+                    </div>
+                    <div class="opciones-transporte">
+                        <div class="transporte-card">
+                            <h3>🚗 Transporte particular</h3>
+                            <ul>
+                                <li>Ruta: Carretera del Litoral (CA-2) hacia el oeste</li>
+                                <li>Dirección: Pasando La Libertad, continuar hacia el oeste</li>
+                                <li>Entrada: Claramente señalizada en la carretera</li>
+                                <li>Parqueo: $2-3 USD en la playa</li>
+                            </ul>
+                        </div>
+                        <div class="transporte-card">
+                            <h3>🚌 Transporte público</h3>
+                            <ul>
+                                <li>Ruta 192 o 102: Terminal de Occidente → La Libertad</li>
+                                <li>Desde La Libertad: Bus hacia El Zonte
+                                    <ul>
+                                        <li>Buses locales que van hacia el occidente</li>
+                                        <li>Costo: $0.75 - $1.00 USD desde San Salvador</li>
+                                        <li>Frecuencia: Cada 20-30 minutos</li>
+                                        <li>Horario: 5:00 AM - 6:30 PM</li>
+                                    </ul>
+                                </li>
+                        </div>
+                    </div>
+                    <div class="mapa-section">
+                        <h3>📍 Ubicación en el mapa</h3>
+                        <div class="mapa-placeholder">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3879.6704828859883!2d-89.44258432607603!3d13.494391086871142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f7d2b51d7ed5c87%3A0x1033c08c290debb3!2sPlaya%20El%20Zonte!5e0!3m2!1sen!2ssv!4v1759521736956!5m2!1sen!2ssv" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <!-- Pie de página -->
