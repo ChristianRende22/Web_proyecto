@@ -11,6 +11,7 @@ HEX: #C65A46 - marrón  -->
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +19,7 @@ HEX: #C65A46 - marrón  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <title>Sitio turístico</title>
 </head>
+
 <body>
 
     <!-- Barra de navegación -->
@@ -29,7 +31,7 @@ HEX: #C65A46 - marrón  -->
                     <img src="img/logo.png" alt="Logo" class="logo-img">
                     <span class="logo-text">TurismoX</span>
                 </div>
-                
+
                 <ul class="nav-menu">
                     <li class="nav-item">
                         <a href="#inicio" class="nav-link">Inicio</a>
@@ -59,23 +61,21 @@ HEX: #C65A46 - marrón  -->
         <div class="contenedor-inicio">
             <div class="contenido-principal">
                 <h1 class="titulo-principal">
-                    Descubre los 
+                    Descubre los
                     <span class="texto-destacado">Tesoros Ocultos</span>
                     de El Salvador
                 </h1>
                 <p class="descripcion-inicio">
-                    Bienvenido/a a TurismoX. Explora los monumentos más antiguos y destinos únicos que 
-                    definen nuestro patrimonio cultural salvadoreño. Desde ruinas mayas hasta pueblos 
+                    Bienvenido/a a TurismoX. Explora los monumentos más antiguos y destinos únicos que
+                    definen nuestro patrimonio cultural salvadoreño. Desde ruinas mayas hasta pueblos
                     coloniales, descubre los mejores <b class="bold">sitios turísticos</b> de nuestro país El Salvador.
                 </p>
-                <a href="https://www.tripadvisor.es/Attractions-g294476-Activities-San_Salvador_San_Salvador_Department.html" target="_blank"><button class="boton-explorar">Explorar destinos</button></a>
+                <a href="https://www.tripadvisor.es/Attractions-g294476-Activities-San_Salvador_San_Salvador_Department.html"
+                    target="_blank"><button class="boton-explorar">Explorar destinos</button></a>
             </div>
             <div class="imagenes-inicio">
                 <div class="imagen-principal">
                     <img src="img/centroturistico.jpg" alt="Centro histórico con un atardecer naranja" class="img-hero">
-                </div>
-                <div class="imagen-secundaria">
-                    <img src="img/diseño.jpg" alt="Paisajes de El Salvador" class="img-pequeña">
                 </div>
             </div>
         </div>
@@ -83,46 +83,355 @@ HEX: #C65A46 - marrón  -->
 
     <!-- Galeria -->
     <section id="galeria" class="seccion-galeria">
-        <h2>Galería de Imágenes</h2>
-        <div class="galeria-contenedor">
-            <!-- MELI PONE SU GALERIA DE IMAGENES -->
-            <img src="img1.jpg" alt="Lugar turístico 1"> 
-            <img src="img2.jpg" alt="Lugar turístico 2"> 
-            <img src="img3.jpg" alt="Lugar turístico 3">
+        <div class="contenedor-galeria">
+            <div class="encabezado-galeria">
+                <h2 class="titulo-galeria">Galería de Destinos</h2>
+                <p class="subtitulo-galeria">Descubre la belleza natural y cultural de El Salvador</p>
+            </div>
+            <div class="slider-container">
+                <ul>
+                    <li><img src="img/carrusel/ElZonte.jpg" alt="El Zonte - Playa perfecta para surf"></li>
+                    <li><img src="img/carrusel/Imposible.jpg" alt="Parque Nacional El Imposible"></li>
+                    <li><img src="img/carrusel/Lago-de-Coatepeque.jpg" alt="Lago de Coatepeque"></li>
+                    <li><img src="img/carrusel/pupusas_comida.jpg" alt="Gastronomía tradicional salvadoreña"></li>
+                </ul>
+            </div>
         </div>
     </section>
 
     <!-- Acerca del equipo -->
-    <section id="equipo" class="seccion-acerca">
-        <h2>Acerca del equipo</h2>
-        <p>Explora nuestras principales y más recomendadas atracciones turísticas</p>
-        <a href="acerca.html" class="btn">Leer más</a>
+    <section id="equipo" class="seccion-equipo">
+        <div class="contenedor-equipo">
+            <div class="encabezado-seccion">
+                <h2 class="titulo-seccion">Descubre los Creadores</h2>
+                <p class="subtitulo-seccion">
+                    Conoce al equipo de desarrollo que hizo posible esta plataforma turística
+                </p>
+            </div>
+            
+            <div class="contenido-equipo">
+                <div class="texto-equipo">
+                    <h3 class="titulo-destacado">Equipo de Desarrollo Web</h3>
+                    <p class="descripcion-equipo">
+                        Somos un <span class="texto-resaltado">equipo apasionado de desarrolladores</span> 
+                        comprometidos con crear experiencias digitales excepcionales. Combinamos tecnología 
+                        moderna con diseño intuitivo para promover las maravillas turísticas de El Salvador 
+                        y conectar a los viajeros con destinos únicos.
+                    </p>
+                    <div class="caracteristicas-equipo">
+                        <div class="caracteristica">
+                            <i class="fas fa-code icono-caracteristica"></i>
+                            <span>Desarrollo web moderno</span>
+                        </div>
+                        <div class="caracteristica">
+                            <i class="fas fa-palette icono-caracteristica"></i>
+                            <span>Diseño UX/UI centrado en el usuario</span>
+                        </div>
+                        <div class="caracteristica">
+                            <i class="fas fa-heart icono-caracteristica"></i>
+                            <span>Pasión por el turismo salvadoreño</span>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-equipo">
+                        <a href="#equipo" class="boton-equipo">
+                            <span>Conocer al equipo</span>
+                            <i class="fas fa-users"></i>
+                        </a>
+                       
+                    </div>
+                </div>
+                
+                <div class="imagen-equipo">
+                    <div class="tarjeta-imagen">
+                        <img src="img/centroturistico.jpg" alt="Representación del trabajo en equipo y desarrollo web" class="img-equipo">
+                        <div class="overlay-equipo">
+                            <div class="contenido-overlay-equipo">
+                                <i class="fas fa-laptop-code icono-overlay"></i>
+                                <p class="texto-overlay">Creando experiencias digitales</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Atracciones --> 
-    <section id="atracciones" class="seccion-atracciones"> 
-        <h2>Atracciones</h2> 
-        <p>Explora nuestras principales atracciones turísticas.</p> 
-        <a href="atracciones.html" class="btn">Ver atracciones</a> 
+    <!-- Atracciones -->
+    <section id="atracciones" class="seccion-atracciones">
+        <div class="contenedor-atracciones">
+            <div class="encabezado-seccion">
+                <h2 class="titulo-seccion">Destinos Imperdibles</h2>
+                <p class="subtitulo-seccion">
+                    Descubre los lugares más fascinantes que El Salvador tiene para ofrecerte
+                </p>
+            </div>
+            
+            <div class="grid-atracciones">
+                <div class="tarjeta-atraccion">
+                    <div class="imagen-atraccion">
+                        <img src="img/Lago-de-Coatepeque.jpg" alt="Lago de Coatepeque" class="img-atraccion">
+                        <div class="overlay-atraccion">
+                            <i class="fas fa-mountain icono-tipo"></i>
+                        </div>
+                    </div>
+                    <div class="contenido-atraccion">
+                        <h3>Sitios Naturales</h3>
+                        <p>Lagos cristalinos, volcanes majestuosos y parques nacionales</p>
+                    </div>
+                </div>
+                
+                <div class="tarjeta-atraccion">
+                    <div class="imagen-atraccion">
+                        <img src="img/joya-de-ceren.jpg" alt="Joya de Cerén" class="img-atraccion">
+                        <div class="overlay-atraccion">
+                            <i class="fas fa-landmark icono-tipo"></i>
+                        </div>
+                    </div>
+                    <div class="contenido-atraccion">
+                        <h3>Patrimonio Cultural</h3>
+                        <p>Sitios arqueológicos y monumentos históricos únicos</p>
+                    </div>
+                </div>
+                
+                <div class="tarjeta-atraccion">
+                    <div class="imagen-atraccion">
+                        <img src="img/Playa_tunco.jpeg" alt="Playa El Tunco" class="img-atraccion">
+                        <div class="overlay-atraccion">
+                            <i class="fas fa-water icono-tipo"></i>
+                        </div>
+                    </div>
+                    <div class="contenido-atraccion">
+                        <h3>Playas & Surf</h3>
+                        <p>Costas paradisíacas perfectas para el surf y descanso</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-atracciones">
+                <a href="pages/atracciones_actividades.html" class="boton-principal">
+                    <span>Explorar todas las atracciones</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
     </section>
 
-    <!-- Tarifas --> 
-     <section id="tarifas" class="seccion-tarifas"> 
-        <h2>Tarifas</h2> 
-        <p>Consulta nuestros precios y paquetes turísticos.</p> 
-        <a href="tarifas.html" class="btn">Ver tarifas</a> 
+    <!-- Tarifas -->
+    <section id="tarifas" class="seccion-tarifas">
+        <div class="contenedor-tarifas">
+            <div class="encabezado-seccion">
+                <h2 class="titulo-seccion">Tarifas de Destinos</h2>
+                <p class="subtitulo-seccion">
+                    Conoce los precios reales de entrada a los principales destinos turísticos de El Salvador
+                </p>
+            </div>
+            
+            <div class="categorias-tarifas">
+                <div class="categoria-tarifa">
+                    <div class="encabezado-categoria">
+                        <i class="fas fa-mountain icono-categoria"></i>
+                        <h3>Naturaleza</h3>
+                    </div>
+                    <div class="destinos-categoria">
+                        <div class="destino-item">
+                            <span class="nombre-destino">Volcán de Santa Ana</span>
+                            <span class="precio-destino">$2 - $3</span>
+                        </div>
+                        <div class="destino-item">
+                            <span class="nombre-destino">Lago de Coatepeque</span>
+                            <span class="precio-destino">Gratis</span>
+                        </div>
+                        <div class="destino-item">
+                            <span class="nombre-destino">Parque El Imposible</span>
+                            <span class="precio-destino">$3 - $6</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="categoria-tarifa">
+                    <div class="encabezado-categoria">
+                        <i class="fas fa-water icono-categoria"></i>
+                        <h3>Playas</h3>
+                    </div>
+                    <div class="destinos-categoria">
+                        <div class="destino-item">
+                            <span class="nombre-destino">Playa El Tunco</span>
+                            <span class="precio-destino">Gratis</span>
+                        </div>
+                        <div class="destino-item">
+                            <span class="nombre-destino">Playa El Zonte</span>
+                            <span class="precio-destino">Gratis</span>
+                        </div>
+                        <div class="destino-item destacado">
+                            <span class="nombre-destino">Parqueos privados</span>
+                            <span class="precio-destino">$2 - $5</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="categoria-tarifa">
+                    <div class="encabezado-categoria">
+                        <i class="fas fa-landmark icono-categoria"></i>
+                        <h3>Cultura</h3>
+                    </div>
+                    <div class="destinos-categoria">
+                        <div class="destino-item">
+                            <span class="nombre-destino">Joya de Cerén</span>
+                            <span class="precio-destino">$1 - $5</span>
+                        </div>
+                        <div class="destino-item">
+                            <span class="nombre-destino">Centro Histórico</span>
+                            <span class="precio-destino">Gratis</span>
+                        </div>
+                        <div class="destino-item">
+                            <span class="nombre-destino">Ruta de las Flores</span>
+                            <span class="precio-destino">Gratis</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="categoria-tarifa">
+                    <div class="encabezado-categoria">
+                        <i class="fas fa-utensils icono-categoria"></i>
+                        <h3>Gastronomía</h3>
+                    </div>
+                    <div class="destinos-categoria">
+                        <div class="destino-item">
+                            <span class="nombre-destino">Pupusas Olocuilta</span>
+                            <span class="precio-destino">$0.75 - $1.50</span>
+                        </div>
+                        <div class="destino-item">
+                            <span class="nombre-destino">Típicos Margoth</span>
+                            <span class="precio-destino">$4 - $8</span>
+                        </div>
+                        <div class="destino-item destacado">
+                            <span class="nombre-destino">Acceso libre</span>
+                            <span class="precio-destino">Solo consumo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="notas-tarifas">
+                <div class="nota-importante">
+                    <i class="fas fa-info-circle"></i>
+                    <p><strong>Nota:</strong> Los precios pueden variar. Menores de 12 años y adultos mayores tienen descuentos especiales en varios destinos.</p>
+                </div>
+            </div>
+            
+            <div class="cta-tarifas">
+                <a href="pages/tarifas.html" class="boton-principal">
+                    <span>Ver todos los paquetes</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
     </section>
 
-    <!-- Contacto --> 
-    <section id="contacto" id="contacto" class="seccion-contacto">
-        <h2>Contacto</h2>
-        <p>¿Quieres más información o sugerir nuevas atracciones?</p>
-        <a href="contacto.html" class="btn">Ir a Contacto</a>
+    <!-- Contacto -->
+    <section id="contacto" class="seccion-contacto">
+        <div class="contenedor-contacto">
+            <div class="contenido-contacto">
+                <div class="informacion-contacto">
+                    <div class="encabezado-contacto">
+                        <h2 class="titulo-seccion-contacto">¡Planifica tu próxima aventura!</h2>
+                        <p class="subtitulo-contacto">
+                            ¿Listo para descubrir los tesoros de El Salvador? Contáctanos y hagamos realidad 
+                            tu experiencia turística perfecta.
+                        </p>
+                    </div>
+                    
+                    <div class="metodos-contacto">
+                        <div class="metodo-contacto">
+                            <div class="icono-contacto">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="detalles-contacto">
+                                <h4>Llámanos</h4>
+                                <p>+503 2XXX-XXXX</p>
+                                <small>Lun - Dom: 8:00 AM - 6:00 PM</small>
+                            </div>
+                        </div>
+                        
+                        <div class="metodo-contacto">
+                            <div class="icono-contacto">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="detalles-contacto">
+                                <h4>Escríbenos</h4>
+                                <p>info@turismox.com</p>
+                                <small>Respuesta en 24 horas</small>
+                            </div>
+                        </div>
+                        
+                        <div class="metodo-contacto">
+                            <div class="icono-contacto">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="detalles-contacto">
+                                <h4>Visítanos</h4>
+                                <p>San Salvador, El Salvador</p>
+                                <small>Centro de información turística</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-contacto">
+                        <a href="pages/contacto.html" class="boton-principal">
+                            <span>Solicitar información</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </a>
+                        <div class="redes-sociales">
+                            <a href="#" class="red-social">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="red-social">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="red-social">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="imagen-contacto">
+                    <div class="tarjeta-imagen-contacto">
+                        <img src="img/salvador_del_mundo.jpeg" alt="Salvador del Mundo" class="img-contacto">
+                        <div class="overlay-contacto">
+                            <div class="texto-overlay-contacto">
+                                <i class="fas fa-heart"></i>
+                                <p>Tu próxima aventura te espera</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Footer --> 
-    <footer> 
-        <p>&copy; 2025 TurismoX. Todos los derechos reservados.</p> 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="contenedor-footer">
+            <div class="info-footer">
+                <div class="logo-footer">
+                    <span class="logo-text">TurismoX</span>
+                </div>
+                <p>Descubriendo los tesoros ocultos de El Salvador desde 2025</p>
+                <div class="redes-footer">
+                    <a href="#" class="red-footer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="red-footer"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="red-footer"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 TurismoX. Todos los derechos reservados.</p>
+        </div>
     </footer>
+
+
 </body>
+
 </html>

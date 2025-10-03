@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - TurismoX</title>
+    <link rel="stylesheet" href="../css/contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+
+    <a href="../index.html" class="boton-inicio">
+        <i class="fas fa-home"></i>
+        Inicio
+    </a>
+
+    <header class="encabezado-contacto">
+        <div class="contenedor-encabezado">
+            <h1 class="titulo-principal">¡Contáctanos!</h1>
+            <p class="subtitulo-principal">
+                Estamos aquí para ayudarte a planificar tu próxima aventura en El Salvador. 
+                Completa el formulario o utiliza nuestros otros medios de contacto.
+            </p>
+        </div>
+    </header>
+
+    <main class="contenido-principal">
+        <div class="contenedor-contacto">
+            
+            <section class="seccion-formulario">
+                <div class="encabezado-formulario">
+                    <h2>Envíanos un mensaje</h2>
+                    <p>Completa el formulario y te responderemos en menos de 24 horas</p>
+                </div>
+                
+                <form class="formulario-contacto" id="formularioContacto">
+                    <div class="grupo-campos">
+                        <div class="campo">
+                            <label for="nombre" class="etiqueta">
+                                <i class="fas fa-user"></i>
+                                Nombre completo *
+                            </label>
+                            <input type="text" id="nombre" name="nombre" class="entrada" required>
+                        </div>
+                        
+                        <div class="campo">
+                            <label for="email" class="etiqueta">
+                                <i class="fas fa-envelope"></i>
+                                Correo electrónico *
+                            </label>
+                            <input type="email" id="email" name="email" class="entrada" required>
+                        </div>
+                    </div>
+                    
+                    <div class="grupo-campos">
+                        <div class="campo">
+                            <label for="telefono" class="etiqueta">
+                                <i class="fas fa-phone"></i>
+                                Teléfono
+                            </label>
+                            <input type="tel" id="telefono" name="telefono" class="entrada" placeholder="+503 1234-5678">
+                        </div>
+                        
+                        <div class="campo">
+                            <label for="destino" class="etiqueta">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Destino de interés
+                            </label>
+                            <select id="destino" name="destino" class="entrada">
+                                <option value="">Selecciona un destino</option>
+                                <option value="lago-coatepeque">Lago de Coatepeque</option>
+                                <option value="volcan-santa-ana">Volcán de Santa Ana</option>
+                                <option value="el-imposible">Parque Nacional El Imposible</option>
+                                <option value="playa-tunco">Playa El Tunco</option>
+                                <option value="playa-zonte">Playa El Zonte</option>
+                                <option value="joya-ceren">Joya de Cerén</option>
+                                <option value="ruta-flores">Ruta de las Flores</option>
+                                <option value="centro-historico">Centro Histórico</option>
+                                <option value="multiple">Múltiples destinos</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="campo">
+                        <label for="fechaViaje" class="etiqueta">
+                            <i class="fas fa-calendar-alt"></i>
+                            Fecha aproximada de viaje
+                        </label>
+                        <input type="date" id="fechaViaje" name="fechaViaje" class="entrada">
+                    </div>
+                    
+                    <div class="grupo-campos">
+                        <div class="campo">
+                            <label for="personas" class="etiqueta">
+                                <i class="fas fa-users"></i>
+                                Número de personas
+                            </label>
+                            <select id="personas" name="personas" class="entrada">
+                                <option value="">Selecciona</option>
+                                <option value="1">1 persona</option>
+                                <option value="2">2 personas</option>
+                                <option value="3-4">3-4 personas</option>
+                                <option value="5-8">5-8 personas</option>
+                                <option value="9+">Más de 8 personas</option>
+                            </select>
+                        </div>
+                        
+                        <div class="campo">
+                            <label for="presupuesto" class="etiqueta">
+                                <i class="fas fa-dollar-sign"></i>
+                                Presupuesto aproximado
+                            </label>
+                            <select id="presupuesto" name="presupuesto" class="entrada">
+                                <option value="">Selecciona</option>
+                                <option value="50-100">$50 - $100</option>
+                                <option value="100-200">$100 - $200</option>
+                                <option value="200-500">$200 - $500</option>
+                                <option value="500+">Más de $500</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="campo">
+                        <label for="mensaje" class="etiqueta">
+                            <i class="fas fa-comment"></i>
+                            Mensaje adicional
+                        </label>
+                        <textarea id="mensaje" name="mensaje" class="entrada textarea" rows="5"
+                                  placeholder="Cuéntanos más sobre tu viaje ideal, intereses especiales, necesidades particulares, etc."></textarea>
+                    </div>
+                    
+                    <div class="campo-checkbox">
+                        <label class="checkbox-contenedor">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <span class="checkmark"></span>
+                            Quiero recibir ofertas especiales y noticias sobre turismo en El Salvador
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="boton-enviar">
+                        <i class="fas fa-paper-plane"></i>
+                        Enviar mensaje
+                    </button>
+                </form>
+            </section>
+            
+            <section class="seccion-info">
+                <div class="info-contacto">
+                    <h3>Información de contacto</h3>
+                    
+                    <div class="metodo-contacto">
+                        <div class="icono-metodo">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="detalles-metodo">
+                            <h4>Teléfono</h4>
+                            <p>+503 2XXX-XXXX</p>
+                            <small>Lunes a Domingo: 8:00 AM - 6:00 PM</small>
+                        </div>
+                    </div>
+                    
+                    <div class="metodo-contacto">
+                        <div class="icono-metodo">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="detalles-metodo">
+                            <h4>Email</h4>
+                            <p>info@turismox.com</p>
+                            <small>Respuesta en 24 horas</small>
+                        </div>
+                    </div>
+                    
+                    <div class="metodo-contacto">
+                        <div class="icono-metodo">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="detalles-metodo">
+                            <h4>Oficina</h4>
+                            <p>San Salvador, El Salvador</p>
+                            <small>Centro de información turística</small>
+                        </div>
+                    </div>
+                    
+                    <div class="metodo-contacto">
+                        <div class="icono-metodo">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="detalles-metodo">
+                            <h4>WhatsApp</h4>
+                            <p>+503 7XXX-XXXX</p>
+                            <small>Respuesta inmediata</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="redes-sociales">
+                    <h4>Síguenos</h4>
+                    <div class="iconos-redes">
+                        <a href="#" class="red-social facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="red-social instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="red-social twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="red-social youtube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="red-social tiktok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="horarios">
+                    <h4>Horarios de atención</h4>
+                    <div class="horario-item">
+                        <span class="dia">Lunes - Viernes</span>
+                        <span class="hora">8:00 AM - 6:00 PM</span>
+                    </div>
+                    <div class="horario-item">
+                        <span class="dia">Sábados</span>
+                        <span class="hora">9:00 AM - 5:00 PM</span>
+                    </div>
+                    <div class="horario-item">
+                        <span class="dia">Domingos</span>
+                        <span class="hora">10:00 AM - 4:00 PM</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- <section class="seccion-mapa">
+        <div class="contenedor-mapa">
+            <h3>Nuestra ubicación</h3>
+            <div class="mapa-placeholder">
+                <i class="fas fa-map-marked-alt"></i>
+                <p>Centro de San Salvador, El Salvador</p>
+                <small>Mapa interactivo disponible próximamente</small>
+            </div>
+        </div>
+    </section> -->
+
+    <footer class="footer">
+        <div class="contenedor-footer">
+            <div class="info-footer">
+                <div class="logo-footer">
+                    <span class="logo-text">TurismoX</span>
+                </div>
+                <p>Descubriendo los tesoros ocultos de El Salvador desde 2025</p>
+                <div class="redes-footer">
+                    <a href="#" class="red-footer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="red-footer"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="red-footer"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 TurismoX. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
