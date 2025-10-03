@@ -1,11 +1,128 @@
+<!-- PAGINA DE INICIO -->
+
+<!-- Colores
+HEX: #1C1C1C - negro
+HEX: #FAF7F4 - blanco
+HEX: #F36B3A - naranja
+HEX: #F4EDE7 - beige
+HEX: #7A7A7A - gris
+HEX: #8A9C7B - verde
+HEX: #C65A46 - marrón  -->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Sitio turístico</title>
 </head>
 <body>
-    
+
+    <!-- Barra de navegación -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <!-- Logo -->
+                <div class="nav-logo">
+                    <img src="img/logo.png" alt="Logo" class="logo-img">
+                    <span class="logo-text">TurismoX</span>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#inicio" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#galeria" class="nav-link">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#equipo" class="nav-link">Equipo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#atracciones" class="nav-link">Atracciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#tarifas" class="nav-link">Tarifas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contacto" class="nav-link">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Inicio -->
+    <section id="inicio" class="seccion-inicio">
+        <div class="contenedor-inicio">
+            <div class="contenido-principal">
+                <h1 class="titulo-principal">
+                    Descubre los 
+                    <span class="texto-destacado">Tesoros Ocultos</span>
+                    de El Salvador
+                </h1>
+                <p class="descripcion-inicio">
+                    Bienvenido/a a TurismoX. Explora los monumentos más antiguos y destinos únicos que 
+                    definen nuestro patrimonio cultural salvadoreño. Desde ruinas mayas hasta pueblos 
+                    coloniales, descubre los mejores <b class="bold">sitios turísticos</b> de nuestro país El Salvador.
+                </p>
+                <a href="https://www.tripadvisor.es/Attractions-g294476-Activities-San_Salvador_San_Salvador_Department.html" target="_blank"><button class="boton-explorar">Explorar destinos</button></a>
+            </div>
+            <div class="imagenes-inicio">
+                <div class="imagen-principal">
+                    <img src="img/centroturistico.jpg" alt="Centro histórico con un atardecer naranja" class="img-hero">
+                </div>
+                <div class="imagen-secundaria">
+                    <img src="img/diseño.jpg" alt="Paisajes de El Salvador" class="img-pequeña">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria -->
+    <section id="galeria" class="seccion-galeria">
+        <h2>Galería de Imágenes</h2>
+        <div class="galeria-contenedor">
+            <!-- MELI PONE SU GALERIA DE IMAGENES -->
+            <img src="img1.jpg" alt="Lugar turístico 1"> 
+            <img src="img2.jpg" alt="Lugar turístico 2"> 
+            <img src="img3.jpg" alt="Lugar turístico 3">
+        </div>
+    </section>
+
+    <!-- Acerca del equipo -->
+    <section id="equipo" class="seccion-acerca">
+        <h2>Acerca del equipo</h2>
+        <p>Explora nuestras principales y más recomendadas atracciones turísticas</p>
+        <a href="acerca.html" class="btn">Leer más</a>
+    </section>
+
+    <!-- Atracciones --> 
+    <section id="atracciones" class="seccion-atracciones"> 
+        <h2>Atracciones</h2> 
+        <p>Explora nuestras principales atracciones turísticas.</p> 
+        <a href="atracciones.html" class="btn">Ver atracciones</a> 
+    </section>
+
+    <!-- Tarifas --> 
+     <section id="tarifas" class="seccion-tarifas"> 
+        <h2>Tarifas</h2> 
+        <p>Consulta nuestros precios y paquetes turísticos.</p> 
+        <a href="tarifas.html" class="btn">Ver tarifas</a> 
+    </section>
+
+    <!-- Contacto --> 
+    <section id="contacto" id="contacto" class="seccion-contacto">
+        <h2>Contacto</h2>
+        <p>¿Quieres más información o sugerir nuevas atracciones?</p>
+        <a href="contacto.html" class="btn">Ir a Contacto</a>
+    </section>
+
+    <!-- Footer --> 
+    <footer> 
+        <p>&copy; 2025 TurismoX. Todos los derechos reservados.</p> 
+    </footer>
 </body>
 </html>
