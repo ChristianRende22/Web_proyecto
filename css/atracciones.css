@@ -62,7 +62,6 @@ body {
     font-size: 24px;
     font-weight: 700;
     color: #F36B3A;
-    font-family: 'Outfit', sans-serif;
     letter-spacing: 1px;
 
 }
@@ -559,7 +558,6 @@ body {
     font-size: 2rem;
     font-weight: 700;
     color: #F36B3A;
-    font-family: 'Outfit', sans-serif;
     margin-bottom: 15px;
     display: block;
 }
