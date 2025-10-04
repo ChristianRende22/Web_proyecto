@@ -125,6 +125,7 @@ body {
     padding: 40px 20px;
     position: relative;
     overflow: hidden;
+    margin-top: 80px;
 }
 
 .header2::before {
@@ -498,3 +499,4 @@ body {
         height: 150px;
     }
 }
+
