@@ -26,30 +26,101 @@ img {
     display: block;
 }
 
-.boton-inicio {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    background: linear-gradient(135deg, #F36B3A, #C65A46);
-    color: #FAF7F4;
-    padding: 12px 20px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-    box-shadow: 0 4px 15px rgba(243, 107, 58, 0.3);
-    transition: all 0.3s ease;
+/* Header y navegación */
+.header {
+    background: #FFFFFF;
+    box-shadow: 0 2px 10px rgba(28, 28, 28, 0.1);
+    position: sticky;
+    top: 0;
     z-index: 1000;
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    color: #1C1C1C;
+    cursor: pointer;
+    user-select: none;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.nav-logo {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
 }
 
-.boton-inicio:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(243, 107, 58, 0.4);
+.logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
 }
 
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #F36B3A;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    list-style: none;
+    position: relative;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #1C1C1C;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 8px 0;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #F36B3A;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #F36B3A;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
 
 .encabezado-contacto {
     background: linear-gradient(135deg, #F4EDE7 0%, #FAF7F4 100%);
@@ -445,10 +516,8 @@ select.entrada {
     margin-bottom: 30px;
 }
 
-.logo-text {
+.info-footer .logo-text {
     font-size: 2rem;
-    font-weight: 700;
-    color: #F36B3A;
     margin-bottom: 15px;
     display: block;
 }
@@ -493,6 +562,38 @@ select.entrada {
 
 /* Tablets */
 @media (max-width: 768px) {
+    /* Menú hamburguesa para tablets y móviles */
+    .menu-icon {
+        display: block;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: #FFFFFF;
+        width: 100%;
+        text-align: center;
+        transition: left 0.3s ease;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 20px 0;
+        gap: 0;
+    }
+    
+    .nav-item {
+        margin: 10px 0;
+    }
+    
+    .nav-link {
+        padding: 10px 0;
+        display: block;
+    }
+    
+    .menu-toggle:checked ~ .nav-menu {
+        left: 0;
+    }
+    
     .contenedor-contacto {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -517,15 +618,34 @@ select.entrada {
     .contenido-principal {
         padding: 60px 0;
     }
+    
+    .metodo-contacto {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .iconos-redes {
+        justify-content: center;
+    }
 }
 
 /* Celulares */
 @media (max-width: 480px) {
-    .boton-inicio {
-        top: 15px;
-        left: 15px;
-        padding: 10px 15px;
-        font-size: 0.8rem;
+    .nav-container {
+        padding: 0 15px;
+    }
+    
+    .logo-img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .logo-text {
+        font-size: 1.2rem;
+    }
+    
+    .nav-menu {
+        top: 60px;
     }
     
     .titulo-principal {
@@ -539,6 +659,25 @@ select.entrada {
     .seccion-formulario {
         padding: 20px;
         margin: 0 10px;
+        border-radius: 15px;
+    }
+    
+    .encabezado-formulario h2 {
+        font-size: 1.5rem;
+    }
+    
+    .etiqueta {
+        font-size: 0.85rem;
+    }
+    
+    .entrada {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+    
+    .boton-enviar {
+        padding: 14px 30px;
+        font-size: 0.95rem;
     }
     
     .info-contacto,
@@ -546,6 +685,21 @@ select.entrada {
     .horarios {
         padding: 20px;
         margin: 0 10px;
+        border-radius: 15px;
+    }
+    
+    .info-contacto h3,
+    .redes-sociales h4,
+    .horarios h4 {
+        font-size: 1.3rem;
+    }
+    
+    .detalles-metodo h4 {
+        font-size: 1rem;
+    }
+    
+    .detalles-metodo p {
+        font-size: 0.9rem;
     }
     
     .encabezado-contacto {
@@ -574,6 +728,14 @@ select.entrada {
     .checkbox-contenedor {
         font-size: 0.85rem;
     }
+    
+    .info-footer .logo-text {
+        font-size: 1.5rem;
+    }
+    
+    .info-footer p {
+        font-size: 0.9rem;
+    }
 }
 
 /* Celulares pequeños */
@@ -585,7 +747,32 @@ select.entrada {
     }
     
     .titulo-principal {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
+    }
+    
+    .subtitulo-principal {
+        font-size: 0.9rem;
+    }
+    
+    .logo-text {
+        font-size: 1rem;
+    }
+    
+    .logo-img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .seccion-formulario,
+    .info-contacto,
+    .redes-sociales,
+    .horarios {
+        padding: 15px;
+        margin: 0 5px;
+    }
+    
+    .encabezado-formulario h2 {
+        font-size: 1.3rem;
     }
     
     .iconos-redes {
@@ -596,6 +783,11 @@ select.entrada {
         width: 40px;
         height: 40px;
         font-size: 1rem;
+    }
+    
+    .boton-enviar {
+        padding: 12px 25px;
+        font-size: 0.9rem;
     }
 }
 

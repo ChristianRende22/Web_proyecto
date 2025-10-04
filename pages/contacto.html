@@ -9,10 +9,45 @@
 </head>
 <body>
 
-    <a href="../index.html" class="boton-inicio">
-        <i class="fas fa-home"></i>
-        Inicio
-    </a>
+    <!-- Barra de navegación -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <!-- Logo -->
+                <div class="nav-logo">
+                    <img src="../img/logo.png" alt="Logo" class="logo-img">
+                    <span class="logo-text">TurismoX</span>
+                </div>
+
+                <!-- Botón hamburguesa (solo visible en móvil) -->
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">
+                    <i class="fas fa-bars"></i>
+                </label>
+
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../index.html#galeria" class="nav-link">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="quienes_somos.html" class="nav-link">Equipo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="atracciones_actividades.html" class="nav-link">Atracciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="tarifas.html" class="nav-link">Tarifas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contacto.html" class="nav-link">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
     <header class="encabezado-contacto">
         <div class="contenedor-encabezado">
@@ -233,17 +268,6 @@
             </section>
         </div>
     </main>
-
-    <!-- <section class="seccion-mapa">
-        <div class="contenedor-mapa">
-            <h3>Nuestra ubicación</h3>
-            <div class="mapa-placeholder">
-                <i class="fas fa-map-marked-alt"></i>
-                <p>Centro de San Salvador, El Salvador</p>
-                <small>Mapa interactivo disponible próximamente</small>
-            </div>
-        </div>
-    </section> -->
 
     <footer class="footer">
         <div class="contenedor-footer">
