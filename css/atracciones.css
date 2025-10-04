@@ -119,6 +119,10 @@ body {
   color: #1C1C1C;
   transition: color 0.3s ease;
   position: relative;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu-icon:hover {
@@ -127,20 +131,14 @@ body {
 
 .menu-icon i {
   font-size: 1.8rem;
-}
-
-/* Fallback si no carga Font Awesome */
-.menu-icon::before {
-  content: "☰";
-  font-size: 1.8rem;
-  line-height: 1;
   display: block;
+  line-height: 1;
 }
 
-.menu-icon i {
-  position: absolute;
-  top: 0;
-  left: 0;
+/* Fallback si no carga Font Awesome - oculto cuando hay icono */
+.menu-icon::before {
+  content: "";
+  display: none;
 }
 
 
@@ -654,7 +652,19 @@ body {
 @media (max-width: 480px) {
     /* Mostrar botón hamburguesa */
     .menu-icon {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    .menu-icon i {
+        font-size: 1.8rem;
+        line-height: 1;
+        text-rendering: optimizeLegibility;
     }
 
     .nav-container {
