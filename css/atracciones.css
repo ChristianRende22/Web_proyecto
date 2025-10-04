@@ -147,7 +147,7 @@ body {
 /* Encabezado */
 .encabezado {
     text-align: center;
-    padding: 120px 20px 80px 20px;
+    padding: 120px 20px 100px 20px;
     background: linear-gradient(135deg, #F36B3A, #F4EDE7);
     color: var(--negro-suave);
     position: relative;
@@ -156,7 +156,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 50vh;
+    min-height: 70vh;
 }
 
 .encabezado::after {
@@ -169,29 +169,29 @@ body {
     background: #FAF7F4;
     border-radius: 50% 50% 0 0;
     transform: scaleX(1.5);
+    z-index: 1;
 }
 
 .encabezado h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 3.5rem;
+    margin-bottom: 25px;
     color: #1C1C1C;
     font-weight: 700;
     line-height: 1.2;
     text-align: center;
     position: relative;
-    z-index: 2;
+    z-index: 10;
 }
 
 .encabezado p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 1.3rem;
+    margin: 0 auto 35px auto;
+    max-width: 650px;
     color: #1C1C1C;
     text-align: center;
     position: relative;
-    z-index: 2;
+    z-index: 10;
+    line-height: 1.5;
 }
 
 .boton-viaje {
@@ -206,7 +206,8 @@ body {
     display: inline-block;
     transition: all 0.3s ease;
     position: relative;
-    z-index: 2;
+    z-index: 10;
+    margin-bottom: 20px;
 }
 
 .boton-viaje:hover {
@@ -605,8 +606,13 @@ body {
 /* Tablets y dispositivos medianos (481px - 768px) */
 @media (max-width: 768px) and (min-width: 481px) {
     .encabezado {
-        padding: 100px 20px 70px 20px;
-        min-height: 45vh;
+        padding: 100px 20px 80px 20px;
+        min-height: 55vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
     
     .encabezado::after {
@@ -615,13 +621,22 @@ body {
     }
     
     .encabezado h1 {
-        font-size: 2.5rem;
-        margin-bottom: 18px;
+        font-size: 2.8rem;
+        margin-bottom: 25px;
+        font-weight: 700;
+        line-height: 1.2;
     }
     
     .encabezado p {
-        font-size: 1.1rem;
-        max-width: 80%;
+        font-size: 1.3rem;
+        max-width: 85%;
+        margin: 0 auto 30px auto;
+        line-height: 1.4;
+    }
+    
+    .boton-viaje {
+        margin-bottom: 20px;
+        z-index: 10;
     }
     
     .mapa-placeholder {
@@ -686,13 +701,14 @@ body {
 
     /* Ajustar encabezado para que no se tape */
     .encabezado {
-        padding: 120px 15px 60px 15px;
+        padding: 100px 15px 80px 15px;
         margin-top: 0;
-        min-height: 40vh;
+        min-height: 60vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
     }
     
     .encabezado::after {
@@ -701,23 +717,27 @@ body {
     }
     
     .encabezado h1 {
-        font-size: 1.8rem;
-        line-height: 1.2;
+        font-size: 2rem;
+        line-height: 1.3;
         text-align: center;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
+        font-weight: 700;
     }
     
     .encabezado p {
-        font-size: 1rem;
-        padding: 0 10px;
+        font-size: 1.1rem;
+        padding: 0 20px;
         text-align: center;
-        max-width: 90%;
-        margin-bottom: 25px;
+        max-width: 95%;
+        margin: 0 auto 30px auto;
+        line-height: 1.4;
     }
     
     .boton-viaje {
         padding: 10px 20px;
         font-size: 0.95rem;
+        margin-bottom: 15px;
+        z-index: 10;
     }
     
     .boton-inicio {
