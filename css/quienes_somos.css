@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Poppins', sans-serif;
     background: url('../img/mapa2.jpg');    
@@ -14,20 +15,119 @@ body {
     color: #1C1C1C;
     min-height: 100vh;
 }
-header {
+
+/* navegacion*/
+.header {
+     background-color: #FAF7F4;
+    box-shadow: 0 2px 10px rgba(28, 28, 28, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #F36B3A;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #1C1C1C;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 8px 0;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #F36B3A;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #F36B3A;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Botón hamburguesa para el celular */
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none; 
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--negro-suave);
+
+}
+/* header de "quienes somos" */
+.header2 {
     width: 100%;
     min-height: 25vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background:  #F36B3A;
+    background: #F36B3A;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     padding: 40px 20px;
     position: relative;
     overflow: hidden;
 }
-header::before {
+
+.header2::before {
     content: '';
     position: absolute;
     top: 0;
@@ -36,8 +136,8 @@ header::before {
     bottom: 0;
     opacity: 0.3;
 }
-/* "quienes somos" */
-header h1 {
+
+.header2 h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 4rem;
     font-weight: 900;
@@ -46,8 +146,8 @@ header h1 {
     margin-bottom: 10px;
     position: relative;
 }
-/* "equipo detras de la magia" */
-header p {
+
+.header2 p {
     font-size: 1.3rem;
     font-weight: 500;
     color: #F4EDE7;
@@ -55,13 +155,14 @@ header p {
     z-index: 1;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
+
 .container {
     width: 100%;
     max-width: 1400px;
     margin: 60px auto;
     padding: 0 10px;
 }
-/* "conocenos un poco mas */
+
 .container h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 3rem;
@@ -71,15 +172,17 @@ header p {
     text-align: center;
     position: relative;
 }
+
 .grid {
     display: grid;
     grid-template-columns: 1fr; 
-    gap: 40px; /* Espacio entre tarjetas para evitar solapamiento */
+    gap: 40px;
     margin-top: 40px;
     max-width: 800px; 
     margin-left: auto;
     margin-right: auto;
 }
+
 .cartas {
     background: linear-gradient(145deg, #FFFFFF 0%, #F4EDE7 100%);
     border-radius: 20px;
@@ -91,7 +194,8 @@ header p {
     position: relative;
     overflow: hidden;
 }
-/* animacion de arriba */
+
+/* Animación de arriba */
 .cartas::before {
     content: '';
     position: absolute;
@@ -104,10 +208,12 @@ header p {
     transform-origin: left;
     transition: transform 0.4s ease;
 }
+
 .cartas:hover::before {
     transform: scaleX(1);
 }
-/* imagen del avioncito */
+
+/* Imagen del avioncito */
 .cartas::after {
     content: '';
     position: absolute;
@@ -122,7 +228,8 @@ header p {
     opacity: 1;
     z-index: 2;
 }
-/* posicionando las cartas de nosotros */
+
+/* Posicionando las cartas */
 .cartas:nth-child(1) { 
     transform: translateY(0);
 }
@@ -138,11 +245,13 @@ header p {
 .cartas:nth-child(5) { 
     transform: translateY(-3px);
 }
+
 .cartas:hover {
     transform: translateY(-15px) scale(1.02);
     box-shadow: 0 20px 50px rgba(238, 84, 28, 0.371);
 }
-/* nombres */
+
+/* Nombres */
 .cartas h3 {
     text-align: center;
     font-size: 1.3rem;
@@ -155,6 +264,7 @@ header p {
     align-items: center;
     justify-content: center;
 }
+
 .foto {
     position: relative;
     width: 220px;
@@ -166,7 +276,8 @@ header p {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     transform: rotate(0deg);
 }
-/* borde de la foto */
+
+/* Borde de la foto */
 .foto::after {
     content: '';
     position: absolute;
@@ -175,14 +286,16 @@ header p {
     z-index: -1;
     border-radius: 10px;
 }
-/* nuestra pic */
+
+/* Imagen */
 .cartas img {
     width: 100%;
     height: 110%;
     object-fit: cover;
     display: block;
 }
-/* descripcion */
+
+/* Descripción */
 .cartas p {
     font-size: 0.95rem;
     font-weight: 400;
@@ -192,7 +305,8 @@ header p {
     text-align: center;
     flex-grow: 1;
 }
-/* roles que tuvimos en la pag */
+
+/* Roles */
 .cartas .rol {
     font-size: 0.9rem;
     color: #7A7A7A;
@@ -204,6 +318,7 @@ header p {
     border-left: 3px solid #F36B3A;
     border-right: 3px solid #F36B3A;
 }
+
 .boton-correo {
     display: inline-block;
     width: 100%;
@@ -218,55 +333,168 @@ header p {
     transition: all 0.3s ease;
     margin-top: auto;
 }
-/* efecto del boton */
+
+/* Efecto del botón */
 .boton-correo:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(243, 107, 58, 0.4);
     background: linear-gradient(135deg, #C65A46 0%, #F36B3A 100%);
 }
+
 .boton-correo:active {
     transform: translateY(0);
 }
-/* responsive */
+
+/* Footer */
+.footer {
+    background: #1C1C1C;
+    color: #FAF7F4;
+    padding: 50px 0 0;
+}
+
+.contenedor-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.info-footer {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo-text {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #F36B3A;
+    font-family: 'Outfit', sans-serif;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.info-footer p {
+    margin-bottom: 20px;
+    color: #7A7A7A;
+}
+
+.redes-footer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.red-footer {
+    width: 40px;
+    height: 40px;
+    background: #F36B3A;
+    color: #FAF7F4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.red-footer:hover {
+    background: #8A9C7B;
+    transform: translateY(-3px);
+}
+
+.copyright {
+    border-top: 1px solid #333;
+    padding: 20px 0;
+    text-align: center;
+    color: #7A7A7A;
+    font-size: 0.9rem;
+}
+
+/* Responsive*/
 @media (max-width: 1200px) {
-    header h1 {
+    .header2 h1 {
         font-size: 3rem;
     }
     .container h2 {
         font-size: 2.3rem;
     }
 }
+
+/* Responsive para navegación */
 @media (max-width: 768px) {
-    header h1 {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: rgba(243, 107, 58, 0.98);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 2rem 0;
+        gap: 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 0.5rem 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .menu-toggle:checked ~ .nav-menu {
+        left: 0;
+    }
+
+    .header2 h1 {
         font-size: 2.5rem;
     }
-    header p {
+    
+    .header2 p {
         font-size: 1.1rem;
-    } 
+    }
+    
     .container h2 {
         font-size: 2rem;
-    } 
+    }
+    
     .grid {
-        grid-template-columns: 1fr;
         gap: 30px;
-    } 
+    }
+    
+    /* Eliminar escalonamiento en móvil */
     .cartas:nth-child(n) {
         transform: translateY(0) !important;
     }
+    
     .cartas:hover {
         transform: translateY(-10px) scale(1.01) !important;
     }
 }
+
 @media (max-width: 480px) {
-    header {
+    .header2 {
         min-height: 20vh;
         padding: 30px 15px;
+        margin-top: 70px;
     }
-    header h1 {
+    
+    .header2 h1 {
         font-size: 2rem;
     }
+    
     .foto {
         width: 180px;
         height: 240px;
+    }
+
+    .cartas::after {
+        width: 150px;
+        height: 150px;
     }
 }
