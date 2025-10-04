@@ -67,8 +67,6 @@ body {
     font-size: 24px;
     font-weight: 700;
     color: #F36B3A;
-    font-family: 'Outfit', sans-serif;
-
 }
 
 .nav-menu {
@@ -353,7 +351,7 @@ td {
         overflow-x: auto;    
         display: block;        
         overflow-x: auto;
-        scroll-behavior: smooth; 
+        scroll-behavior: smooth;
     }
 
     .tabla table {

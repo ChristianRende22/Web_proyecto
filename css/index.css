@@ -85,8 +85,6 @@ body {
     font-size: 24px;
     font-weight: 700;
     color: #F36B3A;
-    font-family: 'Outfit', sans-serif;
-
 }
 
 .nav-menu {
@@ -157,7 +155,6 @@ body {
     line-height: 1.1;
     margin-bottom: 24px;
     color: #1C1C1C;
-    font-family: 'Outfit', sans-serif;
 }
 
 .texto-destacado {
@@ -377,7 +374,6 @@ body {
     font-size: 2rem;
     font-weight: 700;
     color: #F36B3A;
-    font-family: 'Outfit', sans-serif;
     margin-bottom: 15px;
     display: block;
 }
