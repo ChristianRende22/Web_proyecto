@@ -16,31 +16,129 @@ body {
     background-color: #FAF7F4;
 }
 
-/* Botón de Inicio */
-.boton-inicio {
+/* Header */
+.header {
+    background-color: #FAF7F4;
+    box-shadow: 0 2px 10px rgba(28, 28, 28, 0.1);
     position: fixed;
-    top: 20px;
-    left: 20px;
-    background: #F36B3A;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.9rem;
-    box-shadow: 0 4px 15px rgba(243, 107, 58, 0.3);
-    transition: all 0.3s ease;
+    top: 0;
+    width: 100%;
     z-index: 1000;
-    display: flex;
-    align-items: center;
-    gap: 5px;
+    transition: all 0.3s ease;
 }
 
-.boton-inicio:hover {
-    background: #e55a2b;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(243, 107, 58, 0.4);
+.navbar {
+    padding: 0;
 }
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #F36B3A;
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: 1px;
+
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #1C1C1C;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 8px 0;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #F36B3A;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #F36B3A;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Botón hamburguesa para el celular */
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none; 
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #1C1C1C;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.menu-icon:hover {
+  color: #F36B3A;
+}
+
+.menu-icon i {
+  font-size: 1.8rem;
+}
+
+/* Fallback si no carga Font Awesome */
+.menu-icon::before {
+  content: "☰";
+  font-size: 1.8rem;
+  line-height: 1;
+  display: block;
+}
+
+.menu-icon i {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 
 /* Encabezado */
 .encabezado {
@@ -208,7 +306,7 @@ body {
 
 .ver-detalles {
     color: #1C1C1C;
-    border: solid 2px #ff6b4a;
+    border: solid 2px #ff6b4a;;
     padding: 12px 2px;
     border-radius: 25px;
     font-size: 1em;
@@ -228,6 +326,7 @@ body {
 }
 
 /* Diseño de las cards */
+
 .card{
     display: none;
     position: fixed;
@@ -260,7 +359,7 @@ body {
 }
 
 .card-header{
-    background: linear-gradient(135deg, #8A9C7B 0%, #5b6a4f 100%);
+    background: linear-gradient(135deg, #8A9C7B 0%, #5b6a4f 100%); /*CAMBIARLA A VERDE*/
     color: white;
     padding: 30px;
     border-radius: 15px 15px 0 0;
@@ -303,41 +402,27 @@ body {
     margin-bottom: 20px;
 }
 
-/* Estilos mejorados para listas anidadas */
+/* Estilos para listas anidadas */
 .card-body ul {
-    margin: 10px 0;
     padding-left: 20px;
     list-style: none;
 }
 
 .card-body ul li {
-    margin: 8px 0;
     padding: 5px 0;
-    position: relative;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 /* Listas anidadas (segundo nivel) */
 .card-body ul ul {
-    margin: 8px 0 15px 0;
     padding-left: 25px;
 }
 
 .card-body ul ul li {
-    margin: 4px 0;
     font-size: 0.9em;
     color: #666;
 }
 
-/* Listas de tercer nivel */
-.card-body ul ul ul {
-    padding-left: 30px;
-}
-
-.card-body ul ul ul li {
-    font-size: 0.85em;
-    color: #777;
-}
 
 /* Información general */
 .info-general{
@@ -398,6 +483,7 @@ body {
 }
 
 .mapa-placeholder {
+    
     height: 300px;
     border-radius: 10px;
     display: flex;
@@ -409,93 +495,257 @@ body {
     padding: 20px;
 }
 
-
-/* Pie de página */
-.pie {
+/* Footer */
+.footer {
     background: #1C1C1C;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
-    margin-top: 60px;
+    color: #FAF7F4;
+    padding: 50px 0 0;
 }
 
-/* Diseño responsive */
-@media (max-width: 768px) {
+.contenedor-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.info-footer {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo-text {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #F36B3A;
+    font-family: 'Outfit', sans-serif;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.info-footer p {
+    margin-bottom: 20px;
+    color: #7A7A7A;
+}
+
+.redes-footer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.red-footer {
+    width: 40px;
+    height: 40px;
+    background: #F36B3A;
+    color: #FAF7F4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.red-footer:hover {
+    background: #8A9C7B;
+    transform: translateY(-3px);
+}
+
+.copyright {
+    border-top: 1px solid #333;
+    padding: 20px 0;
+    text-align: center;
+    color: #7A7A7A;
+    font-size: 0.9rem;
+}
+
+
+/* Diseño responsive  */
+
+/* Móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+    /* Mostrar botón hamburguesa */
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-container {
+        height: 70px;
+        padding: 0 15px;
+        position: relative;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #FAF7F4;
+        padding: 15px 0;
+        z-index: 999;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        border-top: 1px solid rgba(243, 107, 58, 0.2);
+    }
+
+    .menu-toggle:checked + .menu-icon + .nav-menu {
+        display: flex;
+    }
+
+    .nav-menu .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu .nav-link {
+        display: block;
+        padding: 15px 0;
+        font-size: 16px;
+        text-align: center;
+        border-radius: 0;
+        transition: all 0.3s ease;
+    }
+
+    .nav-menu .nav-link:hover {
+        background-color: rgba(243, 107, 58, 0.1);
+    }
+
+    /* Ajustar encabezado para que no se tape */
+    .encabezado {
+        padding: 100px 10px 35px 10px;
+        margin-top: 0;
+    }
+    
     .encabezado h1 {
-        font-size: 2rem;
+        font-size: 1.6rem;
+        line-height: 1.1;
     }
     
     .encabezado p {
-        font-size: 1rem;
-    }
-    
-    .encabezado {
-        padding: 60px 20px;
-    }
-    
-    .contenido h2 {
-        font-size: 2rem;
-    }
-    
-    .lugares {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .lugar img {
-        height: 200px;
-    }
-    
-    .info {
-        padding: 20px;
-    }
-
-    .opciones-transporte {
-        grid-template-columns: 1fr;
-    }
-
-    .card-content {
-        margin: 20px;
-        max-width: none;
-    }
-
-    .card-header {
-        padding: 20px;
-    }
-
-    .card-body {
-        padding: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .encabezado h1 {
-        font-size: 1.8rem;
+        font-size: 0.9rem;
+        padding: 0 5px;
     }
     
     .boton-viaje {
-        padding: 12px 25px;
-        font-size: 1rem;
+        padding: 10px 20px;
+        font-size: 0.95rem;
     }
     
     .boton-inicio {
-        top: 15px;
-        left: 15px;
-        padding: 10px 16px;
+        top: 10px;
+        left: 10px;
+        padding: 8px 15px;
         font-size: 0.85rem;
     }
-
+    
+    .contenido {
+        padding: 0 10px;
+        margin: 25px auto;
+    }
+    
+    .contenido h2 {
+        font-size: 1.6rem;
+        margin-bottom: 25px;
+    }
+    
+    .lugares {
+        gap: 15px;
+    }
+    
+    .lugar img {
+        height: 180px;
+    }
+    
+    .info {
+        padding: 15px;
+    }
+    
+    .info h3 {
+        font-size: 1.2rem;
+    }
+    
+    .info p {
+        font-size: 0.9rem;
+    }
+    
+    .actividad {
+        font-size: 0.75rem;
+        padding: 2px 6px;
+    }
+    
+    .categoria {
+        width: 120px;
+        font-size: 0.75rem;
+        padding: 3px 10px;
+    }
+    
     .card {
         padding: 10px;
     }
-
-    .card-content {
-        margin: 10px;
+    
+    .card-header {
+        padding: 20px 15px;
     }
-
-    .card-header h2{
-        font-size: 1.5em;
-        text-align: left;
+    
+    .card-header h2 {
+        font-size: 1.5rem;
     }
+    
+    .card-body {
+        padding: 15px;
+    }
+    
+    .transporte-card {
+        padding: 12px;
+    }
+    
+    .transporte-card h3 {
+        font-size: 1rem;
+    }
+    
+    .mapa-section {
+        padding: 15px 10px;
+    }
+    
+    .mapa-section h3 {
+        font-size: 1.1rem;
+    }
+    
+    .mapa-placeholder {
+        height: 200px;
+        font-size: 0.9rem;
+    }
+    
+    .footer {
+        padding: 25px 0;
+    }
+    
+    .contenedor-footer {
+        padding: 0 15px;
+    }
+    
+    .logo-text {
+        font-size: 1.8rem;
+    }
+    
+    .info-footer p {
+        font-size: 0.9rem;
+    }
+    
+    .redes-footer {
+        gap: 12px;
+    }
+    
+    .red-footer {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .copyright {
+        font-size: 0.8rem;
+        padding: 15px 0;
+    }
+    
 }
 
