@@ -42,6 +42,19 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Botón hamburguesa para el celular */
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none; 
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--negro-suave);
+  user-select: none;
+}
+
 .navbar {
     padding: 0;
 }
@@ -1292,6 +1305,62 @@ body {
     .boton-equipo {
         padding: 15px 30px;
         font-size: 0.9rem;
+    }
+
+    /* Botón hamburguesa */
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;     
+        left: 0;
+        width: 100%;    
+        background-color: #FAF7F4;
+        padding: 5px 0;
+        z-index: 999;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .menu-toggle:checked + .menu-icon + .nav-menu {
+        display: flex;
+    }
+
+    .nav-menu .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu .nav-link {
+        display: block;
+        padding: 12px 0;
+        font-size: 16px;
+    }
+
+    .nav-menu .nav-link {
+    position: relative;
+    text-decoration: none;
+    color: #1C1C1C;;
+    transition: color 0.3s ease;
+    }
+
+    .nav-menu .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;              
+    height: 2px;
+    background-color: #F36B3A;
+    transition: width 0.3s ease;
+    }
+
+    .nav-menu .nav-link:hover::after,
+    .nav-menu .nav-link:focus::after {
+    width: 100%;         
     }
 }
 
