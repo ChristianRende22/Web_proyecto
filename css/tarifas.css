@@ -353,7 +353,8 @@ td {
         margin: 0 auto;
         overflow-x: auto;    
         display: block;        
-        -webkit-overflow-scrolling: touch; 
+        overflow-x: auto;
+        scroll-behavior: smooth; 
     }
 
     .tabla table {
@@ -419,25 +420,25 @@ td {
     }
 
     .nav-menu .nav-link {
-    position: relative;
-    text-decoration: none;
-    color: var(--negro-suave);
-    transition: color 0.3s ease;
+        position: relative;
+        text-decoration: none;
+        color: var(--negro-suave);
+        transition: color 0.3s ease;
     }
 
     .nav-menu .nav-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;              
-    height: 2px;
-    background-color: var(--naranja-vibrante);
-    transition: width 0.3s ease;
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;              
+        height: 2px;
+        background-color: var(--naranja-vibrante);
+        transition: width 0.3s ease;
     }
 
     .nav-menu .nav-link:hover::after,
     .nav-menu .nav-link:focus::after {
-    width: 100%;         
+        width: 100%;         
     }
 }
