@@ -5,11 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tarifas Turísticas de El Salvador</title>
   <link rel="stylesheet" href="../css/tarifas.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body>
 
-    <!-- Botón Inicio -->
-    <a href="../index.html" class="boton-inicio"> Inicio</a>
+    <!-- Barra de navegación -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <!-- Logo -->
+                <div class="nav-logo">
+                    <img src="../img/logo.png" alt="Logo" class="logo-img">
+                    <span class="logo-text">TurismoX</span>
+                </div>
+
+                <!-- Botón hamburguesa (solo visible en móvil) -->
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="quienes_somos.html" class="nav-link">Equipo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="atracciones_actividades.html" class="nav-link">Atracciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="tarifas.html" class="nav-link">Tarifas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contacto.html" class="nav-link">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
     <!-- Encabezado -->
     <header class="encabezado">
@@ -183,7 +221,22 @@
 
     <!-- Pie de página -->
     <footer class="footer">
-        <p class="footer__p">&copy; 2025 TurismoX. Todos los derechos reservados.</p>
+        <div class="contenedor-footer">
+            <div class="info-footer">
+                <div class="logo-footer">
+                    <span class="logo-text">TurismoX</span>
+                </div>
+                <p>Descubriendo los tesoros ocultos de El Salvador desde 2025</p>
+                <div class="redes-footer">
+                    <a href="#" class="red-footer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="red-footer"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="red-footer"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 TurismoX. Todos los derechos reservados.</p>
+        </div>
     </footer>
 </body>
 </html>
