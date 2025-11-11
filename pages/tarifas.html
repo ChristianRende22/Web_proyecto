@@ -55,168 +55,139 @@
         <p class="subtitulo">No viajes con incertidumbre y ten una idea de presupuesto para los lugares más visitados</p>
     </header>
 
-    <!-- Tarifas ordenadas por categoría -->
+    <!-- Tarifas ordenadas por categoría (cards) -->
     <main class="tarifas">
-        <section class="seccion_tarifas">
-        <h2 class="titulo_tarifa">Naturaleza</h2>
-        <div class="contenido_tarifa">
-            <img src="../img/naturaleza_salvadorena.jpg" alt="Paisaje natural de El Salvador" class="imagen">
-            <table class="tabla">
-                <thead>
-                <tr>
-                    <th>Lugar</th>
-                    <th>Nacionales</th>
-                    <th>Extranjeros</th>
-                    <th>Notas</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr class="row">
-                    <td>Volcán de Santa Ana</td>
-                    <td>$2.00</td>
-                    <td>$3.00</td>
-                    <td>Menores de 12 años y adultos mayores gratis</td>
-                </tr>
-                <tr class="row">
-                    <td>Lago de Coatepeque</td>
-                    <td>Acceso libre</td>
-                    <td>Acceso libre</td>
-                    <td>Algunos restaurantes y miradores aplican consumo mínimo</td>
-                </tr>
-                <tr class="row">
-                    <td>Parque Nacional El Imposible</td>
-                    <td>$3.00</td>
-                    <td>$6.00</td>
-                    <td>Área protegida, ideal para senderismo</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-        </section>
+        <div class="tarifas-grid">
+            <article class="categoria-card">
+                <div class="card-header">
+                    <div class="icono-categoria"><i class="fas fa-mountain"></i></div>
+                    <h3>Naturaleza</h3>
+                </div>
+                <div class="card-main">
+                    <div class="card-media"><img src="../img/naturaleza_salvadorena.jpg" alt="Paisaje natural de El Salvador"></div>
+                    <div class="card-body">
+                    <ul class="item-list">
+                        <li class="item">
+                            <div>
+                                <div class="item-name">Volcán de Santa Ana</div>
+                                <small class="item-note">Menores de 12 años y adultos mayores gratis</small>
+                            </div>
+                            <div class="item-right"><span class="item-price">$2 - $3</span></div>
+                        </li>
+                        <li class="item">
+                            <div>
+                                <div class="item-name">Lago de Coatepeque</div>
+                                <small class="item-note">Algunos restaurantes y miradores aplican consumo mínimo</small>
+                            </div>
+                            <div class="item-right"><span class="item-badge-small">Gratis</span></div>
+                        </li>
+                        <li class="item">
+                            <div>
+                                <div class="item-name">Parque Nacional El Imposible</div>
+                                <small class="item-note">Área protegida, ideal para senderismo</small>
+                            </div>
+                            <div class="item-right"><span class="item-price">$3 - $6</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </article>
 
-        <section class="seccion_tarifas">
-        <h2 class="titulo_tarifa">Playas</h2>
-        <div class="contenido_tarifa">
-            <img src="../img/sonsonate-playa.webp" alt="Playa en El Salvador" class="imagen">
-            <table class="tabla">
-                <thead>
-                <tr>
-                    <th>Lugar</th>
-                    <th>Nacionales</th>
-                    <th>Extranjeros</th>
-                    <th>Notas</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr class="row">
-                    <td>Playa El Tunco</td>
-                    <td>Acceso libre</td>
-                    <td>Acceso libre</td>
-                    <td>Parqueos privados entre $2 y $5</td>
-                </tr>
-                <tr class="row">
-                    <td>Playa El Zonte</td>
-                    <td>Acceso libre</td>
-                    <td>Acceso libre</td>
-                    <td>Hoteles y hostales ofrecen paquetes</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-        </section>
+            <article class="categoria-card">
+                <div class="card-header">
+                    <div class="icono-categoria"><i class="fas fa-umbrella-beach"></i></div>
+                    <h3>Playas</h3>
+                </div>
+                <div class="card-main">
+                    <div class="card-media"><img src="../img/sonsonate-playa.webp" alt="Playa en El Salvador"></div>
+                    <div class="card-body">
+                    <ul class="item-list">
+                        <li class="item">
+                            <div><div class="item-name">Playa El Tunco</div><small class="item-note">Parqueos privados entre $2 y $5</small></div>
+                            <div class="item-right"><span class="item-badge-small">Gratis</span></div>
+                        </li>
+                        <li class="item">
+                            <div><div class="item-name">Playa El Zonte</div><small class="item-note">Hoteles y hostales ofrecen paquetes</small></div>
+                            <div class="item-right"><span class="item-badge-small">Gratis</span></div>
+                        </li>
+                        <li class="item">
+                            <div><div class="item-name">Parqueos privados</div><small class="item-note">Costos por hora/diarios</small></div>
+                            <div class="item-right"><span class="item-price">$2 - $5</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </article>
 
-        <section class="seccion_tarifas">
-        <h2 class="titulo_tarifa">Cultura</h2>
-        <div class="contenido_tarifa">
-            <img src="../img/salvador_del_mundo.jpeg" alt="Centro histórico y cultura de El Salvador" class="imagen">
-            <table class="tabla">
-                <thead>
-                <tr>
-                    <th>Lugar</th>
-                    <th>Nacionales</th>
-                    <th>Extranjeros</th>
-                    <th>Notas</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr class="row">
-                    <td>Joya de Cerén</td>
-                    <td>$1.00</td>
-                    <td>$3.00 centroamericanos / $5.00 otros</td>
-                    <td>Sitio arqueológico Patrimonio Mundial</td>
-                </tr>
-                <tr class="row">
-                    <td>Centro Histórico de San Salvador</td>
-                    <td>Gratis</td>
-                    <td>Gratis</td>
-                    <td>Costos asociados a tours guiados opcionales</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-        </section>
+            <article class="categoria-card">
+                <div class="card-header">
+                    <div class="icono-categoria"><i class="fas fa-landmark"></i></div>
+                    <h3>Cultura</h3>
+                </div>
+                <div class="card-main">
+                    <div class="card-media"><img src="../img/salvador_del_mundo.jpeg" alt="Centro histórico y cultura de El Salvador"></div>
+                    <div class="card-body">
+                    <ul class="item-list">
+                        <li class="item">
+                            <div><div class="item-name">Joya de Cerén</div><small class="item-note">Sitio arqueológico Patrimonio Mundial</small></div>
+                            <div class="item-right"><span class="item-price">$1 - $5</span></div>
+                        </li>
+                        <li class="item">
+                            <div><div class="item-name">Centro Histórico de San Salvador</div><small class="item-note">Costos a tours opcionales</small></div>
+                            <div class="item-right"><span class="item-badge-small">Gratis</span></div>
+                        </li>
+                        <li class="item">
+                            <div><div class="item-name">Ruta de las Flores</div><small class="item-note">Cada pueblo puede tener tarifas locales</small></div>
+                            <div class="item-right"><span class="item-badge-small">Gratis</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </article>
 
-        <section class="seccion_tarifas">
-        <h2 class="titulo_tarifa">Aventura</h2>
-        <div class="contenido_tarifa">
-            <img src="../img/ataco.jpg" alt="Turismo de aventura en El Salvador" class="imagen">
-            <table class="tabla">
-                <thead>
-                <tr>
-                    <th>Lugar</th>
-                    <th>Nacionales</th>
-                    <th>Extranjeros</th>
-                    <th>Notas</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr class="row">
-                    <td>Ruta de las Flores</td>
-                    <td>Acceso libre</td>
-                    <td>Acceso libre</td>
-                    <td>Cada pueblo tiene sus propios costos de entrada a atracciones</td>
-                </tr>
-                <tr class="row">
-                    <td>Ataco</td>
-                    <td>Acceso libre</td>
-                    <td>Acceso libre</td>
-                    <td>Tours guiados y miradores con costos variables</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-        </section>
+            <article class="categoria-card">
+                <div class="card-header">
+                    <div class="icono-categoria"><i class="fas fa-route"></i></div>
+                    <h3>Aventura</h3>
+                </div>
+                <div class="card-main">
+                    <div class="card-media"><img src="../img/ataco.jpg" alt="Turismo de aventura en El Salvador"></div>
+                    <div class="card-body">
+                    <ul class="item-list">
+                        <li class="item">
+                            <div><div class="item-name">Ruta de las Flores</div><small class="item-note">Acceso a rutas y miradores</small></div>
+                            <div class="item-right"><span class="item-badge-small">Gratis</span></div>
+                        </li>
+                        <li class="item">
+                            <div><div class="item-name">Ataco</div><small class="item-note">Tours guiados y miradores con costos</small></div>
+                            <div class="item-right"><span class="item-badge-small">Gratis</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </article>
 
-        <section class="seccion_tarifas">
-        <h2 class="titulo_tarifa">Gastronomía</h2>
-        <div class="contenido_tarifa">
-            <img src="../img/pupusas_comida.jpg" alt="Pupusas de Olocuilta" class="imagen">
-            <table class="tabla">
-                <thead>
-                <tr>
-                    <th>Lugar</th>
-                    <th>Nacionales</th>
-                    <th>Extranjeros</th>
-                    <th>Notas</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr class="row">
-                    <td>Olocuilta (pupusas)</td>
-                    <td>Gratis</td>
-                    <td>Gratis</td>
-                    <td>Costo depende del consumo, pupusas entre $0.75 y $1.50</td>
-                </tr>
-                <tr class="row">
-                    <td>Típicos Margoth</td>
-                    <td>Gratis</td>
-                    <td>Gratis</td>
-                    <td>Costo depende del consumo, los platos principales oscilan entre $4 y $8</td>
-                </tr>
-                </tbody>
-            </table>
+            <article class="categoria-card">
+                <div class="card-header">
+                    <div class="icono-categoria"><i class="fas fa-utensils"></i></div>
+                    <h3>Gastronomía</h3>
+                </div>
+                <div class="card-main">
+                    <div class="card-media"><img src="../img/pupusas_comida.jpg" alt="Pupusas de Olocuilta"></div>
+                    <div class="card-body">
+                    <ul class="item-list">
+                        <li class="item">
+                            <div><div class="item-name">Olocuilta (pupusas)</div><small class="item-note">Costo depende del consumo, pupusas entre $0.75 y $1.50</small></div>
+                            <div class="item-right"><span class="item-price">$0.75 - $1.50</span></div>
+                        </li>
+                        <li class="item">
+                            <div><div class="item-name">Típicos Margoth</div><small class="item-note">Platos principales entre $4 y $8</small></div>
+                            <div class="item-right"><span class="item-price">$4 - $8</span></div>
+                        </li>
+                        <li class="item">
+                            <div><div class="item-name">Acceso libre</div><small class="item-note">Solo consumo en algunos sitios</small></div>
+                            <div class="item-right"><span class="item-badge-small">Solo consumo</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </article>
         </div>
-        </section>
     </main>
 
     <!-- Pie de página -->
