@@ -1,33 +1,64 @@
 import { db } from '../service/frebase.js';
 import { getFirestore, collection, getDocs, doc, getDoc } from 'https://www.gstatic.com/firebasejs/12.5.0/firebase-firestore.js';
 
-const cards = document.querySelectorAll(".categoria-card");
+// Mapeo de iconos por categoría
+const iconosPorCategoria = {
+    'naturaleza': 'fa-mountain',
+    'playas': 'fa-umbrella-beach',
+    'cultura': 'fa-landmark',
+    'aventura': 'fa-route',
+    'gastronomía': 'fa-utensils',
+    'gastronomiía': 'fa-utensils', // variante con acento
+    'deportes': 'fa-futbol',
+    'museos': 'fa-museum',
+    'parques': 'fa-tree',
+    'hoteles': 'fa-hotel',
+    'transporte': 'fa-bus'
+};
+
+// Función para obtener el icono apropiado
+function obtenerIcono(nombreCategoria) {
+    const nombreLower = nombreCategoria.toLowerCase().trim();
+    return iconosPorCategoria[nombreLower] || 'fa-map-marker-alt'; // icono por defecto
+}
 
 async function cargarTarifas() {
+    const container = document.getElementById('tarifas-container');
     const tarifasRef = collection(db, "tarifas");
     const tarifasSnap = await getDocs(tarifasRef);
 
-    tarifasSnap.forEach(async (categoriaDoc) => {
+    container.innerHTML = "";
+
+    for (const categoriaDoc of tarifasSnap.docs) {
         const categoria = categoriaDoc.data(); 
         const categoriaId = categoriaDoc.id;
 
-        // tarjeta <h3> 
-        const card = Array.from(cards).find(c =>
-            c.querySelector("h3").textContent.trim().toLowerCase() === categoria.nombre.toLowerCase()
-        );
+        // Crear la tarjeta de categoría
+        const card = document.createElement('article');
+        card.classList.add('categoria-card');
 
-        if (!card) return; // si no existe, saltar
+  
+        const icono = obtenerIcono(categoria.nombre);
+        card.innerHTML = `
+            <div class="card-header">
+                <div class="icono-categoria"><i class="fas ${icono}"></i></div>
+                <h3>${categoria.nombre}</h3>
+            </div>
+            <div class="card-main">
+                <div class="card-media">
+                    <img src="${categoria.imagen || ''}" alt="${categoria.nombre}">
+                </div>
+                <div class="card-body">
+                    <ul class="item-list"></ul>
+                </div>
+            </div>
+        `;
 
-        // imagen
-        const img = card.querySelector(".card-media img");
-        if (img) img.src = categoria.imagen;
-
-        // lugares
+        // Cargar lugares de la categoría seleccionada
         const lugaresRef = collection(db, `tarifas/${categoriaId}/lugares`);
         const lugaresSnap = await getDocs(lugaresRef);
 
         const lista = card.querySelector(".item-list");
-        lista.innerHTML = ""; 
 
         lugaresSnap.forEach(lugarDoc => {
             const lugar = lugarDoc.data();
@@ -49,7 +80,9 @@ async function cargarTarifas() {
 
             lista.appendChild(li);
         });
-    });
+
+        container.appendChild(card);
+    }
 }
 
-cargarTarifas();
+cargarTarifas(); 
