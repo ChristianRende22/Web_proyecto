@@ -13,37 +13,23 @@
     <header class="header">
         <nav class="navbar">
             <div class="nav-container">
-                <!-- Logo -->
                 <div class="nav-logo">
                     <img src="../img/logo.png" alt="Logo" class="logo-img">
                     <span class="logo-text">TurismoX</span>
                 </div>
 
-                <!-- Botón hamburguesa (solo visible en móvil) -->
                 <input type="checkbox" id="menu-toggle" class="menu-toggle">
                 <label for="menu-toggle" class="menu-icon">
                     <i class="fas fa-bars"></i>
                 </label>
                 
                 <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="../index.html" class="nav-link">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../index.html" class="nav-link">Galería</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="quienes_somos.html" class="nav-link">Equipo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="atracciones_actividades.html" class="nav-link">Atracciones</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="tarifas.html" class="nav-link">Tarifas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="contacto.html" class="nav-link">Contacto</a>
-                    </li>
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Galería</a></li>
+                    <li class="nav-item"><a href="quienes_somos.html" class="nav-link">Equipo</a></li>
+                    <li class="nav-item"><a href="atracciones_actividades.html" class="nav-link">Atracciones</a></li>
+                    <li class="nav-item"><a href="tarifas.html" class="nav-link">Tarifas</a></li>
+                    <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
                 </ul>
             </div>
         </nav>
@@ -55,138 +41,10 @@
         <p class="subtitulo">No viajes con incertidumbre y ten una idea de presupuesto para los lugares más visitados</p>
     </header>
 
-    <!-- Tarifas ordenadas por categoría (cards) -->
+    <!-- Tarifas (Cards dinámicas desde Firebase) -->
     <main class="tarifas">
-        <div class="tarifas-grid">
-            <article class="categoria-card">
-                <div class="card-header">
-                    <div class="icono-categoria"><i class="fas fa-mountain"></i></div>
-                    <h3>Naturaleza</h3>
-                </div>
-                <div class="card-main">
-                    <div class="card-media"><img src="../img/naturaleza_salvadorena.jpg" alt="Paisaje natural de El Salvador"></div>
-                    <div class="card-body">
-                    <ul class="item-list">
-                        <li class="item">
-                            <div>
-                                <div class="item-name">Volcán de Santa Ana</div>
-                                <small class="item-note">Menores de 12 años y adultos mayores gratis</small>
-                            </div>
-                            <div class="item-right"><span class="item-price">$2 - $3</span></div>
-                        </li>
-                        <li class="item">
-                            <div>
-                                <div class="item-name">Lago de Coatepeque</div>
-                                <small class="item-note">Algunos restaurantes y miradores aplican consumo mínimo</small>
-                            </div>
-                            <div class="item-right"><span class="item-badge-small">Gratis</span></div>
-                        </li>
-                        <li class="item">
-                            <div>
-                                <div class="item-name">Parque Nacional El Imposible</div>
-                                <small class="item-note">Área protegida, ideal para senderismo</small>
-                            </div>
-                            <div class="item-right"><span class="item-price">$3 - $6</span></div>
-                        </li>
-                    </ul>
-                </div>
-            </article>
-
-            <article class="categoria-card">
-                <div class="card-header">
-                    <div class="icono-categoria"><i class="fas fa-umbrella-beach"></i></div>
-                    <h3>Playas</h3>
-                </div>
-                <div class="card-main">
-                    <div class="card-media"><img src="../img/sonsonate-playa.webp" alt="Playa en El Salvador"></div>
-                    <div class="card-body">
-                    <ul class="item-list">
-                        <li class="item">
-                            <div><div class="item-name">Playa El Tunco</div><small class="item-note">Parqueos privados entre $2 y $5</small></div>
-                            <div class="item-right"><span class="item-badge-small">Gratis</span></div>
-                        </li>
-                        <li class="item">
-                            <div><div class="item-name">Playa El Zonte</div><small class="item-note">Hoteles y hostales ofrecen paquetes</small></div>
-                            <div class="item-right"><span class="item-badge-small">Gratis</span></div>
-                        </li>
-                        <li class="item">
-                            <div><div class="item-name">Parqueos privados</div><small class="item-note">Costos por hora/diarios</small></div>
-                            <div class="item-right"><span class="item-price">$2 - $5</span></div>
-                        </li>
-                    </ul>
-                </div>
-            </article>
-
-            <article class="categoria-card">
-                <div class="card-header">
-                    <div class="icono-categoria"><i class="fas fa-landmark"></i></div>
-                    <h3>Cultura</h3>
-                </div>
-                <div class="card-main">
-                    <div class="card-media"><img src="../img/salvador_del_mundo.jpeg" alt="Centro histórico y cultura de El Salvador"></div>
-                    <div class="card-body">
-                    <ul class="item-list">
-                        <li class="item">
-                            <div><div class="item-name">Joya de Cerén</div><small class="item-note">Sitio arqueológico Patrimonio Mundial</small></div>
-                            <div class="item-right"><span class="item-price">$1 - $5</span></div>
-                        </li>
-                        <li class="item">
-                            <div><div class="item-name">Centro Histórico de San Salvador</div><small class="item-note">Costos a tours opcionales</small></div>
-                            <div class="item-right"><span class="item-badge-small">Gratis</span></div>
-                        </li>
-                        <li class="item">
-                            <div><div class="item-name">Ruta de las Flores</div><small class="item-note">Cada pueblo puede tener tarifas locales</small></div>
-                            <div class="item-right"><span class="item-badge-small">Gratis</span></div>
-                        </li>
-                    </ul>
-                </div>
-            </article>
-
-            <article class="categoria-card">
-                <div class="card-header">
-                    <div class="icono-categoria"><i class="fas fa-route"></i></div>
-                    <h3>Aventura</h3>
-                </div>
-                <div class="card-main">
-                    <div class="card-media"><img src="../img/ataco.jpg" alt="Turismo de aventura en El Salvador"></div>
-                    <div class="card-body">
-                    <ul class="item-list">
-                        <li class="item">
-                            <div><div class="item-name">Ruta de las Flores</div><small class="item-note">Acceso a rutas y miradores</small></div>
-                            <div class="item-right"><span class="item-badge-small">Gratis</span></div>
-                        </li>
-                        <li class="item">
-                            <div><div class="item-name">Ataco</div><small class="item-note">Tours guiados y miradores con costos</small></div>
-                            <div class="item-right"><span class="item-badge-small">Gratis</span></div>
-                        </li>
-                    </ul>
-                </div>
-            </article>
-
-            <article class="categoria-card">
-                <div class="card-header">
-                    <div class="icono-categoria"><i class="fas fa-utensils"></i></div>
-                    <h3>Gastronomía</h3>
-                </div>
-                <div class="card-main">
-                    <div class="card-media"><img src="../img/pupusas_comida.jpg" alt="Pupusas de Olocuilta"></div>
-                    <div class="card-body">
-                    <ul class="item-list">
-                        <li class="item">
-                            <div><div class="item-name">Olocuilta (pupusas)</div><small class="item-note">Costo depende del consumo, pupusas entre $0.75 y $1.50</small></div>
-                            <div class="item-right"><span class="item-price">$0.75 - $1.50</span></div>
-                        </li>
-                        <li class="item">
-                            <div><div class="item-name">Típicos Margoth</div><small class="item-note">Platos principales entre $4 y $8</small></div>
-                            <div class="item-right"><span class="item-price">$4 - $8</span></div>
-                        </li>
-                        <li class="item">
-                            <div><div class="item-name">Acceso libre</div><small class="item-note">Solo consumo en algunos sitios</small></div>
-                            <div class="item-right"><span class="item-badge-small">Solo consumo</span></div>
-                        </li>
-                    </ul>
-                </div>
-            </article>
+        <div class="tarifas-grid" id="tarifas-container">
+           <!-- aca se generan -->
         </div>
     </main>
 
@@ -209,5 +67,7 @@
             <p>&copy; 2025 TurismoX. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script type="module" src="../js/tarifas/tarifas.js"></script>
 </body>
 </html>
