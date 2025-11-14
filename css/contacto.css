@@ -7,17 +7,18 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-    -webkit-text-size-adjust: 100%;
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw; 
 }
 
 body {
+    padding-top: 80px;
     background-color: #FAF7F4;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif !important;
     font-weight: 500;
     line-height: 1.6;
-    color: #1C1C1C;
+    color: #1C1C1C !important;
 }
 
 img {
@@ -26,106 +27,11 @@ img {
     display: block;
 }
 
-/* Header y navegación */
-.header {
-    background: #FFFFFF;
-    box-shadow: 0 2px 10px rgba(28, 28, 28, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-}
-
-.menu-toggle {
-    display: none;
-}
-
-.menu-icon {
-    display: none;
-    font-size: 1.8rem;
-    color: #1C1C1C;
-    cursor: pointer;
-    user-select: none;
-}
-
-.navbar {
-    padding: 0;
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-}
-
-.nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.logo-img {
-    height: 40px;
-    width: auto;
-    object-fit: contain;
-}
-
-.logo-text {
-    font-size: 24px;
-    font-weight: 700;
-    color: #F36B3A;
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 40px;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-item {
-    list-style: none;
-    position: relative;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: #1C1C1C;
-    font-size: 16px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    padding: 8px 0;
-    position: relative;
-}
-
-.nav-link:hover {
-    color: #F36B3A;
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #F36B3A;
-    transition: width 0.3s ease;
-}
-
-.nav-link:hover::after {
-    width: 100%;
-}
-
 .encabezado-contacto {
     background: linear-gradient(135deg, #F4EDE7 0%, #FAF7F4 100%);
     padding: 100px 0 80px;
     text-align: center;
+    margin-top: 0;
 }
 
 .contenedor-encabezado {
@@ -175,6 +81,7 @@ img {
     gap: 60px;
     align-items: start;
 }
+
 
 
 .seccion-formulario {
@@ -559,48 +466,39 @@ select.entrada {
     font-size: 0.9rem;
 }
 
-
-/* Tablets */
-@media (max-width: 768px) {
-    /* Menú hamburguesa para tablets y móviles */
-    .menu-icon {
-        display: block;
-    }
-    
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        flex-direction: column;
-        background-color: #FFFFFF;
-        width: 100%;
-        text-align: center;
-        transition: left 0.3s ease;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-        padding: 20px 0;
-        gap: 0;
-    }
-    
-    .nav-item {
-        margin: 10px 0;
-    }
-    
-    .nav-link {
-        padding: 10px 0;
-        display: block;
-    }
-    
-    .menu-toggle:checked ~ .nav-menu {
-        left: 0;
+/* Tablets y menores - Bootstrap breakpoint */
+@media (max-width: 991px) {
+    body {
+        padding-top: 70px !important;
     }
     
     .contenedor-contacto {
-        grid-template-columns: 1fr;
-        gap: 40px;
+        display: block; /* Quitar grid */
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    
+    .seccion-formulario,
+    .seccion-info {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 30px;
     }
     
     .grupo-campos {
-        grid-template-columns: 1fr;
+        display: block; /* Quitar grid */
+    }
+    
+    .campo {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px !important;
     }
     
     .titulo-principal {
@@ -608,11 +506,11 @@ select.entrada {
     }
     
     .seccion-formulario {
-        padding: 30px;
+        padding: 30px 20px;
     }
     
     .encabezado-contacto {
-        padding: 80px 0 60px;
+        padding: 80px 15px 60px;
     }
     
     .contenido-principal {
@@ -620,32 +518,19 @@ select.entrada {
     }
     
     .metodo-contacto {
-        flex-direction: column;
+        display: block;
         text-align: center;
     }
     
-    .iconos-redes {
-        justify-content: center;
+    .icono-metodo {
+        margin: 0 auto 10px;
     }
 }
 
 /* Celulares */
 @media (max-width: 480px) {
-    .nav-container {
-        padding: 0 15px;
-    }
-    
-    .logo-img {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .logo-text {
-        font-size: 1.2rem;
-    }
-    
-    .nav-menu {
-        top: 60px;
+    body {
+        padding-top: 70px !important;
     }
     
     .titulo-principal {
@@ -657,7 +542,7 @@ select.entrada {
     }
     
     .seccion-formulario {
-        padding: 20px;
+        padding: 20px 15px;
         margin: 0 10px;
         border-radius: 15px;
     }
@@ -673,76 +558,52 @@ select.entrada {
     .entrada {
         padding: 12px;
         font-size: 0.9rem;
+        width: 100%;
     }
     
     .boton-enviar {
         padding: 14px 30px;
         font-size: 0.95rem;
+        width: 100%;
     }
     
     .info-contacto,
     .redes-sociales,
     .horarios {
-        padding: 20px;
-        margin: 0 10px;
+        padding: 20px 15px;
+        margin: 0 10px 20px;
         border-radius: 15px;
     }
     
-    .info-contacto h3,
-    .redes-sociales h4,
-    .horarios h4 {
-        font-size: 1.3rem;
-    }
-    
-    .detalles-metodo h4 {
-        font-size: 1rem;
-    }
-    
-    .detalles-metodo p {
-        font-size: 0.9rem;
-    }
-    
     .encabezado-contacto {
-        padding: 60px 0 40px;
+        padding: 60px 10px 40px;
     }
     
     .contenido-principal {
         padding: 40px 0;
     }
     
-    .seccion-mapa {
-        padding: 60px 0;
-    }
-    
-    .mapa-placeholder {
-        padding: 60px 20px;
-        margin: 0 10px;
-    }
-    
     .horario-item {
-        flex-direction: column;
-        gap: 5px;
+        display: block;
         text-align: center;
+        padding: 10px 0;
+    }
+    
+    .dia,
+    .hora {
+        display: block;
+        margin: 5px 0;
     }
     
     .checkbox-contenedor {
         font-size: 0.85rem;
-    }
-    
-    .info-footer .logo-text {
-        font-size: 1.5rem;
-    }
-    
-    .info-footer p {
-        font-size: 0.9rem;
     }
 }
 
 /* Celulares pequeños */
 @media (max-width: 320px) {
     .contenedor-encabezado,
-    .contenedor-contacto,
-    .contenedor-mapa {
+    .contenedor-contacto {
         padding: 0 10px;
     }
     
@@ -754,39 +615,16 @@ select.entrada {
         font-size: 0.9rem;
     }
     
-    .logo-text {
-        font-size: 1rem;
-    }
-    
-    .logo-img {
-        width: 35px;
-        height: 35px;
-    }
-    
     .seccion-formulario,
     .info-contacto,
     .redes-sociales,
     .horarios {
-        padding: 15px;
-        margin: 0 5px;
-    }
-    
-    .encabezado-formulario h2 {
-        font-size: 1.3rem;
-    }
-    
-    .iconos-redes {
-        gap: 10px;
-    }
-    
-    .red-social {
-        width: 40px;
-        height: 40px;
-        font-size: 1rem;
+        padding: 15px 10px;
+        margin: 0 5px 15px;
     }
     
     .boton-enviar {
-        padding: 12px 25px;
+        padding: 12px 20px;
         font-size: 0.9rem;
     }
 }

@@ -9,8 +9,8 @@
     transition: all 0.3s ease;
 }
 /* NavBar */
-.nav {
-    padding: 0;
+.navbar {
+    background-color: #FFFFFF !important;
 }
 
 .navbar-container {
@@ -35,7 +35,7 @@
     object-fit: contain;
 }
 
-.logo-texto {
+.logo-texto, .logo-text {
     font-size: 2rem;
     font-weight: 700;
     color: #F36B3A;
@@ -120,8 +120,7 @@
         background-color: #f36b3a48;
         color: #FAF7F4 !important;
     }
-    
-    /* Remover el color activo si no quieres que se mantenga */
+
     .nav-link.active {
         color: #1C1C1C !important;
     }
