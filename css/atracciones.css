@@ -188,6 +188,7 @@ body {
     text-align: center;
 }
 
+/* Colores de categorias */
 .categoria.naturaleza {
     background: #8A9C7B;
     color: white;
@@ -212,6 +213,8 @@ body {
     background: #1C1C1C;
     color: white;
 }
+
+/* TODO agregar arqueologia */
 
 /* Diseño de cards de seccion "Como llegar" */
 
