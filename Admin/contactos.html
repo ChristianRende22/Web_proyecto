@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Contactos Recibidos - Admin</title>
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="css/sb-admin-2.css?v=3" rel="stylesheet">
+    <link href="css/custom-logo.css" rel="stylesheet">
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+</head>
+<body id="page-top">
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon">
+                    <img src="img/logo.png" alt="TurismoX Logo" style="width: 40px; height: 40px; object-fit: contain;">
+                </div>
+                <div class="sidebar-brand-text mx-3">TurismoX</div>
+            </a>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-fw fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">Gestión</div>
+            <li class="nav-item"><a class="nav-link" href="empleados.html"><i class="fas fa-fw fa-users"></i><span>Empleados</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="atracciones.html"><i class="fas fa-fw fa-map-marked-alt"></i><span>Atracciones</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="tarifas.html"><i class="fas fa-fw fa-dollar-sign"></i><span>Tarifas</span></a></li>
+            <li class="nav-item active"><a class="nav-link" href="contactos.html"><i class="fas fa-fw fa-envelope"></i><span>Contactos</span></a></li>
+            <hr class="sidebar-divider d-none d-md-block">
+            <div class="text-center d-none d-md-inline"><button class="rounded-circle border-0" id="sidebarToggle"></button></div>
+        </ul>
+        
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3"><i class="fa fa-bars"></i></button>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin User</span>
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in">
+                                <a class="dropdown-item" href="#"><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>Perfil</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>Cerrar Sesión</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <!-- Page Content -->
+                <div class="container-fluid">
+                    <!-- Header Section -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <div>
+                            <h1 class="h3 mb-2 text-gray-800">
+                                <i class="fas fa-envelope text-primary mr-2"></i>Mensajes de Contacto
+                            </h1>
+                            <p class="text-muted mb-0"><i class="fas fa-info-circle mr-1"></i>Visualiza y gestiona los mensajes recibidos</p>
+                        </div>
+                        <div class="text-right">
+                            <h4 class="mb-2"><span class="badge badge-primary badge-pill" id="totalContactos" style="font-size: 1rem;">0 mensajes</span></h4>
+                            <button class="btn btn-success shadow-sm" onclick="exportToCSV()">
+                                <i class="fas fa-file-excel mr-1"></i> Exportar CSV
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div id="alertContainer"></div>
+                    
+                    <!-- Filtros con Cards -->
+                    <div class="row mb-4">
+                        <div class="col-xl-3 col-md-6 mb-3">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Destino</div>
+                                            <select class="form-control form-control-sm border-0 bg-light" id="filterDestino">
+                                                <option value="">Todos los destinos</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-map-marked-alt fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-xl-3 col-md-6 mb-3">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Newsletter</div>
+                                            <select class="form-control form-control-sm border-0 bg-light" id="filterNewsletter">
+                                                <option value="">Todos</option>
+                                                <option value="true">Suscrito</option>
+                                                <option value="false">No suscrito</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-envelope-open-text fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-xl-3 col-md-6 mb-3">
+                            <div class="card border-left-info shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Fecha</div>
+                                            <input type="date" class="form-control form-control-sm border-0 bg-light" id="filterFecha">
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-xl-3 col-md-6 mb-3">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Acciones</div>
+                                            <button class="btn btn-warning btn-sm btn-block" onclick="clearFilters()">
+                                                <i class="fas fa-eraser mr-1"></i> Limpiar
+                                            </button>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-filter fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Lista de Contactos Recibidos</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover" id="dataTable" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Fecha</th>
+                                            <th>Nombre</th>
+                                            <th>Email</th>
+                                            <th>Teléfono</th>
+                                            <th>Destino</th>
+                                            <th>Personas</th>
+                                            <th>Newsletter</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="contactosTableBody"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto"><div class="copyright text-center my-auto"><span>Copyright &copy; TurismoX 2025</span></div></div>
+            </footer>
+        </div>
+    </div>
+    
+    <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    
+    <!-- Modal Detalle Contacto -->
+    <div class="modal fade" id="detalleModal" tabindex="-1" role="dialog" aria-labelledby="detalleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detalleModalLabel">
+                        <i class="fas fa-envelope-open-text mr-2"></i>Detalle del Mensaje
+                    </h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="detalleContent">
+                    <!-- Contenido dinámico -->
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">
+                        <i class="fas fa-times mr-1"></i>Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logoutModalLabel">¿Listo para salir?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Seleccione "Cerrar Sesión" a continuación si está listo para finalizar su sesión actual.
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                    <button class="btn btn-primary" type="button" id="logoutBtn">
+                        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/sb-admin/sb-admin-2.min.js"></script>
+    <script type="module" src="js/auth/auth-guard.js"></script>
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script type="module" src="js/contactos/contactos.js"></script>
+</body>
+</html>
