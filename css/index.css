@@ -1,14 +1,21 @@
+/* 
+PAGINA DE INICIO
+Colores
+HEX: #1C1C1C - negro
+HEX: #FAF7F4 - blanco
+HEX: #F36B3A - naranja
+HEX: #F4EDE7 - beige
+HEX: #7A7A7A - gris
+HEX: #8A9C7B - verde
+HEX: #C65A46 - marrón   
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Story+Script&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-    -webkit-text-size-adjust: 100%;
 }
 
 img {
@@ -27,105 +34,9 @@ img {
 
 body {
     background-color: #FAF7F4;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif !important;
     font-weight: 500;
     padding-top: 70px;
-}
-
-.header {
-    background-color: #FAF7F4;
-    box-shadow: 0 2px 10px rgba(28, 28, 28, 0.1);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-/* Botón hamburguesa para el celular */
-.menu-toggle {
-  display: none;
-}
-
-.menu-icon {
-  display: none; 
-  font-size: 1.8rem;
-  cursor: pointer;
-  color: var(--negro-suave);
-  user-select: none;
-}
-
-.navbar {
-    padding: 0;
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-}
-
-.nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.logo-img {
-    height: 40px;
-    width: auto;
-    object-fit: contain;
-}
-
-.logo-text {
-    font-size: 24px;
-    font-weight: 700;
-    color: #F36B3A;
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 40px;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-item {
-    position: relative;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: #1C1C1C;
-    font-size: 16px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    padding: 8px 0;
-    position: relative;
-}
-
-.nav-link:hover {
-    color: #F36B3A;
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #F36B3A;
-    transition: width 0.3s ease;
-}
-
-.nav-link:hover::after {
-    width: 100%;
 }
 
 .seccion-inicio {
@@ -1032,14 +943,6 @@ body {
 
 /* Tablets grandes */
 @media (max-width: 1024px) {
-    .nav-container {
-        padding: 0 15px;
-    }
-
-    .nav-menu {
-        gap: 25px;
-    }
-
     .contenedor-inicio,
     .contenedor-equipo,
     .contenedor-galeria,
@@ -1061,17 +964,6 @@ body {
 
 /* Tablets */
 @media (max-width: 768px) {
-
-    /* Navegación */
-    .nav-menu {
-        gap: 20px;
-        font-size: 14px;
-    }
-
-    .logo-text {
-        font-size: 20px;
-    }
-
     /* Sección de inicio */
     .contenedor-inicio {
         grid-template-columns: 1fr;
@@ -1157,36 +1049,6 @@ body {
 
 /* Celulares grandes 480px */
 @media (max-width: 480px) {
-
-    .nav-container {
-        flex-wrap: wrap;
-        height: auto;
-        min-height: 70px;
-        padding: 10px 15px;
-    }
-
-    .nav-menu {
-        width: 100%;
-        flex-direction: column;
-        gap: 15px;
-        margin-top: 15px;
-        padding-top: 15px;
-        border-top: 1px solid rgba(243, 107, 58, 0.2);
-    }
-
-    .nav-link {
-        font-size: 14px;
-        text-align: center;
-        padding: 15px 20px;
-        display: block;
-        border-radius: 8px;
-        transition: all 0.3s ease;
-    }
-
-    .nav-link:hover {
-        background-color: rgba(243, 107, 58, 0.1);
-    }
-
     body {
         padding-top: 120px;
     }
@@ -1306,62 +1168,6 @@ body {
         padding: 15px 30px;
         font-size: 0.9rem;
     }
-
-    /* Botón hamburguesa */
-    .menu-icon {
-        display: block;
-    }
-
-    .nav-menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 50px;     
-        left: 0;
-        width: 100%;    
-        background-color: #FAF7F4;
-        padding: 5px 0;
-        z-index: 999;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .menu-toggle:checked + .menu-icon + .nav-menu {
-        display: flex;
-    }
-
-    .nav-menu .nav-item {
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav-menu .nav-link {
-        display: block;
-        padding: 12px 0;
-        font-size: 16px;
-    }
-
-    .nav-menu .nav-link {
-    position: relative;
-    text-decoration: none;
-    color: #1C1C1C;;
-    transition: color 0.3s ease;
-    }
-
-    .nav-menu .nav-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;              
-    height: 2px;
-    background-color: #F36B3A;
-    transition: width 0.3s ease;
-    }
-
-    .nav-menu .nav-link:hover::after,
-    .nav-menu .nav-link:focus::after {
-    width: 100%;         
-    }
 }
 
 @media (max-width: 320px) {
@@ -1373,11 +1179,7 @@ body {
     .titulo-galeria {
         font-size: 1.4rem;
     }
-
-    .nav-container {
-        padding: 10px;
-    }
-
+    
     .contenedor-inicio,
     .contenedor-equipo,
     .contenedor-galeria,

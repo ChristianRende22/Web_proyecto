@@ -10,8 +10,8 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    /* background: url('../img/mapa2.jpg');     */
+    font-family: 'Poppins', sans-serif !important;
+    background: url('../img/mapa2.jpg');    
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -20,102 +20,6 @@ body {
     min-height: 100vh;
 }
 
-/* navegacion*/
-.header {
-     background-color: #FAF7F4;
-    box-shadow: 0 2px 10px rgba(28, 28, 28, 0.1);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-.navbar {
-    padding: 0;
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-}
-
-.nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.logo-img {
-    height: 40px;
-    width: auto;
-    object-fit: contain;
-}
-
-.logo-text {
-    font-size: 24px;
-    font-weight: 700;
-    color: #F36B3A;
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 40px;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-item {
-    position: relative;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: #1C1C1C;
-    font-size: 16px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    padding: 8px 0;
-    position: relative;
-}
-
-.nav-link:hover {
-    color: #F36B3A;
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #F36B3A;
-    transition: width 0.3s ease;
-}
-
-.nav-link:hover::after {
-    width: 100%;
-}
-
-/* Botón hamburguesa para el celular */
-.menu-toggle {
-  display: none;
-}
-
-.menu-icon {
-  display: none; 
-  font-size: 1.8rem;
-  cursor: pointer;
-  color: var(--negro-suave);
-
-}
 /* header de "quienes somos" */
 .header2 {
     text-align: center;
@@ -527,51 +431,6 @@ body {
 }
 
 @media (max-width: 480px) {
-        .menu-icon {
-        display: block;
-    }
-
-    .nav-container {
-        height: 70px;
-        padding: 0 15px;
-        position: relative;
-    }
-
-    .nav-menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background-color: #FAF7F4;
-        padding: 15px 0;
-        z-index: 999;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        border-top: 1px solid rgba(243, 107, 58, 0.2);
-    }
-
-    .menu-toggle:checked + .menu-icon + .nav-menu {
-        display: flex;
-    }
-
-    .nav-menu .nav-item {
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav-menu .nav-link {
-        display: block;
-        padding: 15px 0;
-        font-size: 16px;
-        text-align: center;
-        border-radius: 0;
-        transition: all 0.3s ease;
-    }
-
-    .nav-menu .nav-link:hover {
-        background-color: rgba(243, 107, 58, 0.1);
-    }
     .header2 {
         padding: 100px 15px 80px 15px;
         margin-top: 0;

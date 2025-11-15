@@ -20,117 +20,26 @@
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif !important;
     line-height: 1.6;
     color: #1C1C1C;
     background-color: #FAF7F4;
 }
 
-/* Header */
-.header {
-    background-color: #FAF7F4;
-    box-shadow: 0 2px 10px rgba(28, 28, 28, 0.1);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-.navbar {
-    padding: 0;
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-}
-
-.nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.logo-img {
-    height: 40px;
-    width: auto;
-    object-fit: contain;
-}
-
-.logo-text {
-    font-size: 24px;
-    font-weight: 700;
-    color: #F36B3A;
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 40px;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-item {
-    position: relative;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: #1C1C1C;
-    font-size: 16px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    padding: 8px 0;
-    position: relative;
-}
-
-.nav-link:hover {
-    color: #F36B3A;
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #F36B3A;
-    transition: width 0.3s ease;
-}
-
-.nav-link:hover::after {
-    width: 100%;
-}
-
-/* Botón hamburguesa para el celular */
-.menu-toggle {
-  display: none;
-}
-
-.menu-icon {
-  display: none; 
-  font-size: 1.8rem;
-  cursor: pointer;
-  color: var(--negro-suave);
-
-}
-
 /* Encabezado */
 .encabezado {
     text-align: center;
-    padding: 120px 20px 120px 20px;
+    padding: 120px 20px 100px 20px;
     background: linear-gradient(135deg, #F36B3A, #F4EDE7);
     color: var(--negro-suave);
     position: relative;
+    margin-top: 30px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 65vh;
 }
 
 .encabezado::after {
@@ -141,18 +50,18 @@ body {
     width: 100%;
     height: 80px;
     background: #FAF7F4;
-    border-radius: 50% 50% 0 0;
+    border-radius: 30% 30% 0 0;
 }
 
 .titulo {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 15px;
     letter-spacing: 1px;
 }
 
 .subtitulo {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: 300;
     opacity: 0.9;
     max-width: 800px;
@@ -206,6 +115,7 @@ body {
     background: linear-gradient(135deg, rgba(243,107,58,0.12), rgba(198,90,70,0.06));
     color: var(--naranja-vibrante);
     font-size: 1.1rem;
+    margin-bottom: 15px;
 }
 .card-header h3 {
     font-size: 1.15rem;
@@ -257,10 +167,13 @@ body {
 .item-price {
     background: linear-gradient(135deg, rgba(243,107,58,0.12), rgba(198,90,70,0.08));
     color: var(--naranja-vibrante);
-    padding: 6px 10px;
+    padding: 8px 10px;
     border-radius: 999px;
     font-weight: 700;
     font-size: 0.95rem;
+    display: inline-block;  
+    white-space: nowrap;    
+    line-height: 1;
 }
 .item-badge-small {
     background: #fff4f2;
@@ -284,40 +197,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 18px;
-}
-
-@media (min-width: 900px) {
-    .card-main {
-        /* imagen a la izquierda, contenido a la derecha */
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 28px;
-    }
-    .card-media {
-        width: 40%;
-        height: 320px; /* imagen más alta para impacto */
-        margin-bottom: 0;
-        border-radius: 14px;
-        flex-shrink: 0;
-    }
-    .card-body {
-        width: 60%;
-        padding-right: 24px;
-    }
-
-    .item-list { gap: 22px; }
-    .item { padding: 20px 22px; border-radius: 14px; box-shadow: 0 8px 20px rgba(28,28,28,0.03); }
-    .item-name { font-size: 1.03rem; }
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-    .tarifas-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 480px) {
-    .tarifas-grid { grid-template-columns: 1fr; gap: 18px; }
-    .item { flex-direction: column; align-items: flex-start; }
-    .item-right { align-items: flex-start; width:100%; }
 }
 
 /* Sección de tarifas */
@@ -406,14 +285,6 @@ td {
     margin-bottom: 30px;
 }
 
-.logo-text {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #F36B3A;
-    margin-bottom: 15px;
-    display: block;
-}
-
 .info-footer p {
     margin-bottom: 20px;
     color: #7A7A7A;
@@ -454,35 +325,6 @@ td {
 
 /* MEDIA QUERIES PARA CELULAR */
 @media (max-width: 480px) {
-    .nav-container {
-        flex-wrap: wrap;
-        height: auto;
-        min-height: 70px;
-        padding: 10px 15px;
-    }
-
-    .nav-menu {
-        width: 100%;
-        flex-direction: column;
-        gap: 15px;
-        margin-top: 15px;
-        padding-top: 15px;
-        border-top: 1px solid rgba(243, 107, 58, 0.2);
-    }
-
-    .nav-link {
-        font-size: 14px;
-        text-align: center;
-        padding: 15px 20px;
-        display: block;
-        border-radius: 8px;
-        transition: all 0.3s ease;
-    }
-
-    .nav-link:hover {
-        background-color: rgba(243, 107, 58, 0.1);
-    }
-    
     .contenido_tarifa {
         flex-direction: column;
         align-items: center;
@@ -534,59 +376,32 @@ td {
         padding: 6px 12px;
     }
 
-    /* Botón hamburguesa */
-    .menu-icon {
-        display: block;
+    .tarifas-grid { grid-template-columns: 1fr; gap: 18px; }
+    .item { flex-direction: column; align-items: flex-start; }
+    .item-right { align-items: flex-start; width:100%; }
+}
+
+@media (min-width: 900px) {
+    .card-main {
+        /* imagen a la izquierda, contenido a la derecha */
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 28px;
+    }
+    .card-media {
+        width: 40%;
+        height: 320px; /* imagen más alta para impacto */
+        margin-bottom: 0;
+        border-radius: 14px;
+        flex-shrink: 0;
+    }
+    .card-body {
+        width: 60%;
+        padding-right: 24px;
     }
 
-    .nav-menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;      
-        left: 0;
-        width: 100%;    
-        background-color: var(--blanco-hueso);
-        padding: 15px 0;
-        z-index: 999;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .menu-toggle:checked + .menu-icon + .nav-menu {
-        display: flex;
-    }
-
-    .nav-menu .nav-item {
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav-menu .nav-link {
-        display: block;
-        padding: 12px 0;
-        font-size: 16px;
-    }
-
-    .nav-menu .nav-link {
-        position: relative;
-        text-decoration: none;
-        color: var(--negro-suave);
-        transition: color 0.3s ease;
-    }
-
-    .nav-menu .nav-link::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 0;              
-        height: 2px;
-        background-color: var(--naranja-vibrante);
-        transition: width 0.3s ease;
-    }
-
-    .nav-menu .nav-link:hover::after,
-    .nav-menu .nav-link:focus::after {
-        width: 100%;         
-    }
+    .item-list { gap: 22px; }
+    .item { padding: 20px 22px; border-radius: 14px; box-shadow: 0 8px 20px rgba(28,28,28,0.03); }
+    .item-name { font-size: 1.03rem; }
+    .tarifas-grid { grid-template-columns: 1fr; }
 }
