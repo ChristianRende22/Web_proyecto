@@ -68,6 +68,17 @@
     <!-- Contenido Principal -->
     <main class="contenido mt-1" id="lugares">
         <h2>Lugares para visitar</h2>
+        <!-- Controles de filtro (estáticos, simple) -->
+        <div class="filtros" role="group" aria-label="Filtros de categorías">
+            <button type="button" class="filter-btn active" data-category="all">Todas</button>
+            <button type="button" class="filter-btn" data-category="naturaleza">Naturaleza</button>
+            <button type="button" class="filter-btn" data-category="playas">Playas</button>
+            <button type="button" class="filter-btn" data-category="cultura">Cultura</button>
+            <button type="button" class="filter-btn" data-category="arqueologia">Arqueología</button>
+            <button type="button" class="filter-btn" data-category="aventura">Aventura</button>
+            <button type="button" class="filter-btn" data-category="gastronomia">Gastronomía</button>
+        </div>
+
         <div id="atraccion" class="lugares">
             Cargando . . . 
         </div>
@@ -106,6 +117,7 @@
     <!-- Conexion con firestore -->
     <script src="../js/service/atraccionesService.js" type="module" defer></script>
     <!-- Codigo para filtrar por categoria -->
+    <script src="../js/filtro.js" type="module" defer></script>
     <!-- ... codigo chris ... -->
 </body>
 </html>

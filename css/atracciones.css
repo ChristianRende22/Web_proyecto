@@ -213,6 +213,12 @@ body {
     color: white;
 }
 
+
+.categoria.arqueologia {
+    background: #C38A68;
+    color: white;
+}
+
 /* Diseño de cards de seccion "Como llegar" */
 
 .ver-detalles {
@@ -436,6 +442,41 @@ body {
     color: #7A7A7A;
     font-size: 0.9rem;
 }
+
+/* Estilos para filtros (botones y comportamiento) */
+.filtros {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0 30px;
+}
+
+.filter-btn {
+    background: #FAF7F4;
+    border: 1px solid #f0dcd3;
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #1C1C1C;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.filter-btn:hover { transform: translateY(-2px); }
+
+.filter-btn.active {
+    background: #F36B3A;
+    color: white;
+    border-color: #F36B3A;
+    box-shadow: 0 6px 18px rgba(243,107,58,0.12);
+}
+
+.hidden { display: none !important; }
+
+
+.contenido { padding-top: 20px; }
+
 
 
 /* Diseño responsive  */
@@ -664,4 +705,3 @@ body {
     }
     
 }
-
