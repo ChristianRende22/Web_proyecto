@@ -215,7 +215,7 @@ function setupFormSubmit() {
                 cargo: document.getElementById('cargo').value.trim(),
                 rol: document.getElementById('rol').value,
                 descripcion: document.getElementById('descripcion').value.trim(),
-                imagen: imagenUrl || '../img/ale.jpg', // Default si no hay imagen
+                imagen: imagenUrl || '../img/default.png', // Default si no hay imagen
                 imageUploadId: uploadedImageData.uploadId || null // Vincular con uploads
             };
 
@@ -318,7 +318,7 @@ async function viewEmpleado(id) {
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-warning" onclick="editEmpleado('${id}')" data-dismiss="modal">
+                                <button type="button" class="btn btn-warning" onclick="editEmpleadoFromView('${id}')">
                                     <i class="fas fa-edit"></i> Editar
                                 </button>
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -547,7 +547,22 @@ function setupImageUpload() {
     });
 }
 
+
+async function editEmpleadoFromView(id) {
+    // Cerrar el modal de vista primero
+    $('#viewModal').modal('hide');
+    
+    // Esperar a que el modal se cierre completamente antes de abrir el de edición
+    $('#viewModal').on('hidden.bs.modal', function () {
+        // Remover el listener para evitar múltiples llamadas
+        $(this).off('hidden.bs.modal');
+        // Abrir el modal de edición
+        editEmpleado(id);
+    });
+}
+
 window.viewEmpleado = viewEmpleado;
 window.editEmpleado = editEmpleado;
+window.editEmpleadoFromView = editEmpleadoFromView;
 window.confirmDelete = confirmDelete;
 window.resetForm = resetForm;

@@ -340,7 +340,7 @@ async function viewAtraccion(id) {
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button class="btn btn-warning" type="button" onclick="editAtraccion('${id}')" data-dismiss="modal">
+                            <button class="btn btn-warning" type="button" onclick="editAtraccionFromView('${id}')">
                                 <i class="fas fa-edit"></i> Editar
                             </button>
                             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cerrar</button>
@@ -376,6 +376,18 @@ async function viewAtraccion(id) {
 
 async function manageSubcollection(atraccionId, subcollectionName) {
     currentAtraccionId = atraccionId;
+    
+    // Cerrar el modal de vista primero
+    $('#viewModal').modal('hide');
+    
+    // Esperar a que se cierre completamente
+    await new Promise(resolve => {
+        $('#viewModal').on('hidden.bs.modal', function () {
+            $(this).off('hidden.bs.modal');
+            resolve();
+        });
+    });
+    
     const snap = await getDocs(collection(db, 'atracciones', atraccionId, subcollectionName));
     let items = [];
     let docId = null;
@@ -725,8 +737,22 @@ function setupMapPreview() {
     });
 }
 
+async function editAtraccionFromView(id) {
+    // Cerrar el modal de vista primero
+    $('#viewModal').modal('hide');
+    
+    // Esperar a que el modal se cierre completamente antes de abrir el de edición
+    $('#viewModal').on('hidden.bs.modal', function () {
+        // Remover el listener para evitar múltiples llamadas
+        $(this).off('hidden.bs.modal');
+        // Abrir el modal de edición
+        editAtraccion(id);
+    });
+}
+
 window.viewAtraccion = viewAtraccion;
 window.editAtraccion = editAtraccion;
+window.editAtraccionFromView = editAtraccionFromView;
 window.confirmDelete = confirmDelete;
 window.resetForm = resetForm;
 window.manageSubcollection = manageSubcollection;

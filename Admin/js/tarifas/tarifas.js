@@ -224,7 +224,12 @@ async function viewCategoria(id) {
 
 async function addLugar(categoriaId) {
     currentCategoriaId = categoriaId;
-    showLugarModal(categoriaId, null);
+    // Cerrar el modal de vista antes de abrir el modal de lugar
+    $('#viewModal').modal('hide');
+    $('#viewModal').on('hidden.bs.modal', function () {
+        $(this).off('hidden.bs.modal');
+        showLugarModal(categoriaId, null);
+    });
 }
 
 async function editLugar(categoriaId, lugarId) {
@@ -232,7 +237,13 @@ async function editLugar(categoriaId, lugarId) {
     try {
         const lugarSnap = await getDoc(doc(db, 'tarifas', categoriaId, 'lugares', lugarId));
         if (!lugarSnap.exists()) return;
-        showLugarModal(categoriaId, { id: lugarId, ...lugarSnap.data() });
+        
+        // Cerrar el modal de vista antes de abrir el modal de edición
+        $('#viewModal').modal('hide');
+        $('#viewModal').on('hidden.bs.modal', function () {
+            $(this).off('hidden.bs.modal');
+            showLugarModal(categoriaId, { id: lugarId, ...lugarSnap.data() });
+        });
     } catch (error) {
         console.error('Error:', error);
         showAlert('Error al cargar lugar', 'danger');

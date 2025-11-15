@@ -67,6 +67,7 @@ async function logout() {
         await signOut(auth);
         sessionStorage.clear();
         localStorage.removeItem('empleado');
+        // Ruta relativa: todas las páginas están en Admin/
         window.location.href = 'login.html';
     } catch (error) {
         console.error('Error al cerrar sesión:', error);
