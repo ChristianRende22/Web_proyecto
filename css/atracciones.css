@@ -531,6 +531,19 @@ body {
         height: 100%;
     }
 
+    .filtros {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .categoria {
+        width: auto;
+        padding: 6px 12px;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
 
 /* Móviles pequeños (hasta 480px) */
@@ -703,5 +716,21 @@ body {
         font-size: 0.8rem;
         padding: 15px 0;
     }
-    
+
+    /* Responsive para categorías en móviles: dos columnas de botones ajustados */
+    .filtros {
+        gap: 8px;
+        justify-content: center;
+    }
+
+    .categoria {
+        width: calc(50% - 10px);
+        box-sizing: border-box;
+        padding: 6px 8px;
+        font-size: 0.72rem;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
