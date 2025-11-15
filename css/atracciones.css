@@ -483,6 +483,9 @@ body {
 
 /* Tablets y dispositivos medianos (481px - 768px) */
 @media (max-width: 768px) and (min-width: 481px) {
+    .modal-content { 
+        width: 90% !important;
+    }
     .opciones-transporte {
         grid-template-columns: 1fr;
     }
@@ -549,6 +552,10 @@ body {
 /* Móviles pequeños (hasta 480px) */
 @media (max-width: 480px) {
     /* Ajustar encabezado para que no se tape */
+    .modal-content { 
+        width: 90% !important;
+        margin: 1.75rem auto;
+    }
     .opciones-transporte {
         grid-template-columns: 1fr;
     }
