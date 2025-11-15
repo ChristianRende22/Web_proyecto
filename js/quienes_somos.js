@@ -1,4 +1,4 @@
-import { db } from "../service/firebase.js";
+import { db } from "./service/firebase.js";
 import { collection, getDocs } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-firestore.js";
 
 async function cargarEquipo() {
@@ -23,6 +23,10 @@ async function cargarEquipo() {
             empleados.push(persona);
         }
     });
+
+    console.log(administradores);
+    console.log(empleados);
+    
 
     // 4. Función para crear una tarjeta HTML para administradores
     function crearTarjetaAdmin(persona) {
