@@ -1,5 +1,5 @@
 // Script para manejar el formulario de contacto y guardarlo en Firestore
-import { db } from '../service/frebase.js';
+import { db } from '../service/firebase.js';
 import { collection, addDoc, serverTimestamp } from 'https://www.gstatic.com/firebasejs/12.5.0/firebase-firestore.js';
 
 const form = document.getElementById('formularioContacto');
