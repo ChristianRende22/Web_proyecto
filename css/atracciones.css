@@ -214,7 +214,10 @@ body {
     color: white;
 }
 
-/* TODO agregar arqueologia */
+.categoria.arqueologia {
+    background: #f6c23e;
+    color: white;
+}
 
 /* Diseño de cards de seccion "Como llegar" */
 

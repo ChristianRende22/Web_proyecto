@@ -105,8 +105,8 @@ async function mostrarModal(atrac) {
             <div class="info-general mt-5">
                 <h3>📌 Desde San Salvador</h3>
                 <ul class="p-0">
-                    <li>Distancia: ${atrac.distancia}</li>
-                    <li>Tiempo: ${atrac.tiempo}</li>
+                    <li>Distancia: ${atrac.distancia || "0 km"}</li>
+                    <li>Tiempo: ${atrac.tiempo || "0 minutos"}</li>
                 </ul>
             </div>
             <div class="modal-body">
@@ -147,7 +147,7 @@ async function mostrarModal(atrac) {
                         <div class="mapa-section">
                             <h3>📍 Ubicación en el mapa</h3>
                             <div class="mapa-placeholder">
-                                <iframe src="${atrac.mapa}"></iframe>
+                                ${atrac.mapa}
                             </div>
                         </div>
                     </div>
