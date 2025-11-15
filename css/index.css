@@ -1111,16 +1111,19 @@ body {
 
     .categoria-tarifa {
         padding: 20px 15px;
+        justify-content: center;
     }
 
     .destino-item {
         padding: 10px;
-        font-size: 0.85rem;
+        font-size: 0.85rem;    
+        justify-content: center;
     }
 
     .metodo-contacto {
         padding: 15px;
         flex-direction: column;
+        align-items: center;
         text-align: center;
         gap: 10px;
     }
