@@ -1,4 +1,4 @@
-import { db } from "../service/frebase.js";
+import { db } from "../service/firebase.js";
 import { collection, getDocs } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-firestore.js";
 
 async function cargarEquipo() {
@@ -64,3 +64,4 @@ async function cargarEquipo() {
 }
 // Ejecutar carga
 cargarEquipo();
+
