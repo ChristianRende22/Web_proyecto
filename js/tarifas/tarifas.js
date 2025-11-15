@@ -1,4 +1,4 @@
-import { db } from '../service/frebase.js';
+import { db } from '../service/firebase.js';
 import { getFirestore, collection, getDocs, doc, getDoc } from 'https://www.gstatic.com/firebasejs/12.5.0/firebase-firestore.js';
 
 // Mapeo de iconos por categoría

@@ -147,7 +147,7 @@ async function mostrarModal(atrac) {
                         <div class="mapa-section">
                             <h3>📍 Ubicación en el mapa</h3>
                             <div class="mapa-placeholder">
-                                <iframe src="${atrac.mapa}"></iframe>
+                                ${atrac.mapa}
                             </div>
                         </div>
                     </div>

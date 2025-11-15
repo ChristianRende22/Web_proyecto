@@ -188,6 +188,7 @@ body {
     text-align: center;
 }
 
+/* Colores de categorias */
 .categoria.naturaleza {
     background: #8A9C7B;
     color: white;
@@ -213,9 +214,8 @@ body {
     color: white;
 }
 
-
 .categoria.arqueologia {
-    background: #C38A68;
+    background: #f6c23e;
     color: white;
 }
 
