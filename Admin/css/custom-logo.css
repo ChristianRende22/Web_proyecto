@@ -1,0 +1,105 @@
+/* Custom Logo Styles for TurismoX Admin Panel */
+
+/* Fondo naranja para la página de login */
+body.bg-gradient-primary {
+    background: linear-gradient(135deg, #FF7A59 0%, #FF5733 100%) !important;
+    min-height: 100vh;
+}
+
+/* Logo en el Sidebar */
+.sidebar-brand-icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.sidebar-brand:hover .sidebar-brand-icon img {
+    transform: scale(1.1);
+}
+
+.sidebar-brand-text {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.login-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    animation: fadeInDown 0.8s ease;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #FF7A59 0%, #FF5733 100%) !important;
+}
+
+/* Estilo para el panel izquierdo del login */
+.bg-login-custom {
+    background: linear-gradient(135deg, #FF7A59 0%, #FF5733 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-login-custom::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.form-control-user {
+    transition: all 0.3s ease;
+}
+
+.form-control-user:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 122, 89, 0.25);
+    border-color: #FF7A59;
+}
+
+@media (max-width: 768px) {
+    .sidebar-brand-icon img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .login-logo {
+        width: 80px;
+        height: 80px;
+    }
+}
+
