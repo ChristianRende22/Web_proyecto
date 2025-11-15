@@ -1,6 +1,8 @@
-/* IMPORTACION DE FONT */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Story+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap');
 
+:root {
+    --negro-suave: #1C1C1C;
+}
 * {
     margin: 0;
     padding: 0;
@@ -14,53 +16,59 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    color: #1C1C1C;
+    color: var(--negro-suave);
     min-height: 100vh;
 }
 
 /* header de "quienes somos" */
 .header2 {
-    width: 100%;
-    min-height: 25vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #F36B3A;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    padding: 40px 20px;
+    text-align: center;
+    padding: 120px 20px 100px 20px;
+    background: linear-gradient(135deg, #F36B3A, #F4EDE7);
+    color: var(--negro-suave);
     position: relative;
     overflow: hidden;
-    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    margin-top: 70px;
 }
 
-.header2::before {
-    content: '';
+.header2::after {
+    content: "";
     position: absolute;
-    top: 0;
+    bottom: -1px;
     left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0.3;
+    width: 100%;
+    height: 100px;
+    background: white; 
+    border-radius: 50% 50% 0 0;
+    transform: scaleX(1.5);
+    z-index: 1;
 }
 
 .header2 h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 4rem;
-    font-weight: 900;
-    color: #FAF7F4;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-    margin-bottom: 10px;
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+    color: #1C1C1C;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
     position: relative;
+    z-index: 10;
 }
 
 .header2 p {
     font-size: 1.3rem;
-    font-weight: 500;
-    color: #F4EDE7;
+    margin: 0 auto 35px auto;
+    max-width: 650px;
+    color: #1C1C1C;
+    text-align: center;
     position: relative;
-    z-index: 1;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    line-height: 1.5;
 }
 
 .container {
@@ -252,6 +260,54 @@ body {
     transform: translateY(0);
 }
 
+/* Tarjetas específicas para empleados */
+.cartas-empleado {
+    width: 320px;
+    margin: 20px auto;
+    padding: 20px;
+    min-height: 200px;
+}
+
+.cartas-empleado::after {
+    display: none; 
+}
+
+.cartas-empleado h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    min-height: auto;
+}
+
+.cartas-empleado p {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.cartas-empleado .rol {
+    font-size: 0.85rem;
+    padding: 10px;
+    margin-bottom: 12px;
+}
+
+.cartas-empleado .boton-correo {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+}
+
+/* Grid específico para cuando hay empleados - 2 columnas */
+.grid:has(.cartas-empleado) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 700px;
+}
+
+/* Los administradores siguen en una columna centrada */
+.grid .cartas:not(.cartas-empleado) {
+    grid-column: 1 / -1;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 /* Footer */
 .footer {
     background: #1C1C1C;
@@ -324,16 +380,36 @@ body {
         font-size: 2.3rem;
     }
 }
-
 /* Responsive para navegación */
-@media (max-width: 768px) {
-   
+/* Tablets y dispositivos medianos (481px - 768px) */
+@media (max-width: 768px) and (min-width: 481px) {
+    .header2 {
+        padding: 100px 20px 80px 20px;
+        min-height: 55vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .header2::after {
+        height: 80px;
+        transform: scaleX(1.3);
+    }
+    
     .header2 h1 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
+        margin-bottom: 25px;
+        font-weight: 700;
+        line-height: 1.2;
     }
     
     .header2 p {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
+        max-width: 85%;
+        margin: 0 auto 30px auto;
+        line-height: 1.4;
     }
     
     .container h2 {
@@ -356,13 +432,36 @@ body {
 
 @media (max-width: 480px) {
     .header2 {
-        min-height: 20vh;
-        padding: 30px 15px;
-        margin-top: 70px;
+        padding: 100px 15px 80px 15px;
+        margin-top: 0;
+        min-height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .header2::after {
+        height: 60px;
+        transform: scaleX(1.2);
     }
     
     .header2 h1 {
         font-size: 2rem;
+        line-height: 1.3;
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+    
+    .header2 p {
+        font-size: 1.1rem;
+        padding: 0 20px;
+        text-align: center;
+        max-width: 95%;
+        margin: 0 auto 30px auto;
+        line-height: 1.4;
     }
     
     .foto {
