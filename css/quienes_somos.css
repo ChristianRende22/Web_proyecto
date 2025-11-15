@@ -358,14 +358,14 @@ body {
 
 /* Tarjetas específicas para empleados */
 .cartas-empleado {
-    max-width: 320px;
-    margin: 0 auto;
+    width: 320px;
+    margin: 20px auto;
     padding: 20px;
-    min-height: auto;
+    min-height: 200px;
 }
 
 .cartas-empleado::after {
-    display: none; /* Quitar imagen del avión para empleados */
+    display: none; 
 }
 
 .cartas-empleado h3 {
